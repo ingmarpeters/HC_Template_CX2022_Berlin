@@ -1,0 +1,16 @@
+<div class="footer">
+  {{#if settings.footer}}
+  <div class="custom-footer">
+    <div class="container">
+      <img src="{{settings.footer_img}}" />
+    </div>
+  </div>
+  {{/if}}
+</div>
+{{#if settings.additional_footer}}
+<div class="additional-footer">
+  <div class="container">
+    <img src="{{settings.additional_footer_img}}" />
+  </div>
+</div>
+{{/if}}

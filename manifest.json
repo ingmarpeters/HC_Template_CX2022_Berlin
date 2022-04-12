@@ -1,0 +1,1482 @@
+{
+  "name": "Barista 4",
+  "author": "Marcelo De Bortoli, Ingmar Peters",
+  "version": "1.0.3",
+  "api_version": 2,
+  "default_locale": "en-us",
+  "settings": [
+    {
+      "label": "CX2022 - Header - Global",
+      "variables": [
+        {
+          "identifier": "logo",
+          "type": "file",
+          "description": "Company logo",
+          "label": "Logo"
+        },
+        {
+          "identifier": "favicon",
+          "type": "file",
+          "description": "Icon displayed in the address bar of your browser",
+          "label": "Favicon"
+        },
+        {
+          "identifier": "header_font_color",
+          "type": "color",
+          "description": "Font color of the header menu",
+          "label": "Header font color",
+          "value": "rgba(255, 255, 255, 1)"
+        },
+        {
+          "identifier": "menu_font_color",
+          "type": "color",
+          "description": "Font color of the menu and search box",
+          "label": "Menue font color",
+          "value": "rgba(255, 255, 255, 1)"
+        }
+      ]
+    },
+    {
+      "label": "CX2022 - Header - Menu",
+      "variables": [
+        {
+          "identifier": "menu_title_1",
+          "type": "text",
+          "description": "The title of menu item #1",
+          "label": "Menu title",
+          "value": "Event Support"
+        },
+        {
+          "identifier": "menu_link_1",
+          "type": "text",
+          "description": "The link of menu item #1",
+          "label": "Menu URL",
+          "value": "https://z3n-cx2022.zendesk.com/hc/de"
+        },
+        {
+          "identifier": "menu_title_2",
+          "type": "text",
+          "description": "The title of menu item #2",
+          "label": "Menu title",
+          "value": "Barista"
+        },
+        {
+          "identifier": "menu_link_2",
+          "type": "text",
+          "description": "The link of menu item #2",
+          "label": "Menu URL",
+          "value": "https://z3n-barista.zendesk.com/hc"
+        },
+        {
+          "identifier": "menu_title_3",
+          "type": "text",
+          "description": "The title of menu item #3",
+          "label": "Menu title",
+          "value": "Dumplings"
+        },
+        {
+          "identifier": "menu_link_3",
+          "type": "text",
+          "description": "The link of menu item #3",
+          "label": "Menu URL",
+          "value": "http://www.ipeters.de"
+        },
+        {
+          "identifier": "menu_title_4",
+          "type": "text",
+          "description": "The title of menu item #4",
+          "label": "Menu title",
+          "value": "Liq Bar"
+        },
+        {
+          "identifier": "menu_link_4",
+          "type": "text",
+          "description": "The link of menu item #4",
+          "label": "Menu URL",
+          "value": "http://www.ipeters.de"
+        },
+        {
+          "identifier": "menu_title_5",
+          "type": "text",
+          "description": "The title of menu item #5",
+          "label": "Menu title",
+          "value": "Tech for Good"
+        },
+        {
+          "identifier": "menu_link_5",
+          "type": "text",
+          "description": "The link of menu item #5",
+          "label": "Menu URL",
+          "value": "http://www.ipeters.de"
+        },
+        {
+          "identifier": "menu_title_6",
+          "type": "text",
+          "description": "The title of menu item #6",
+          "label": "Menu title",
+          "value": "Blackboard"
+        },
+        {
+          "identifier": "menu_link_6",
+          "type": "text",
+          "description": "The link of menu item #6",
+          "label": "Menu URL",
+          "value": "http://www.ipeters.de"
+        },
+        {
+          "identifier": "menu_title_7",
+          "type": "text",
+          "description": "The title of menu item #7",
+          "label": "Menu title",
+          "value": "Healthgarden"
+        },
+        {
+          "identifier": "menu_link_7",
+          "type": "text",
+          "description": "The link of menu item #7",
+          "label": "Menu URL",
+          "value": "http://www.ipeters.de"
+        },
+        {
+          "identifier": "menu_title_8",
+          "type": "text",
+          "description": "The title of menu item #8",
+          "label": "Menu title",
+          "value": "Street Art Wall"
+        },
+        {
+          "identifier": "menu_link_8",
+          "type": "text",
+          "description": "The link of menu item #8",
+          "label": "Menu URL",
+          "value": "http://www.ipeters.de"
+        }
+      ]
+    },
+    {
+      "label": "CX2022 - Main",
+      "variables": [
+        {
+          "identifier": "faq",
+          "type": "checkbox",
+          "description": "Activate FAQ",
+          "label": "Activate FAQ",
+          "value": true
+        },
+        {
+          "identifier": "form1_url",
+          "type": "text",
+          "description": "URL to first form",
+          "label": "URL form 1",
+          "value": "requests/new?ticket_form_id=4710225526685"
+        },
+        {
+          "identifier": "form1_title",
+          "type": "text",
+          "description": "Title of first form",
+          "label": "Title form 1",
+          "value": "Kaffee bestellen"
+        },
+        {
+          "identifier": "form1_image",
+          "type": "file",
+          "description": "Image for first form",
+          "label": "Image form 1"
+        },
+        {
+          "identifier": "form2_url",
+          "type": "text",
+          "description": "URL to second form",
+          "label": "URL form 2",
+          "value": "requests/new"
+        },
+        {
+          "identifier": "form2_title",
+          "type": "text",
+          "description": "Title of second form",
+          "label": "Title form 2",
+          "value": "Mehr Kaffee"
+        },
+        {
+          "identifier": "form2_image",
+          "type": "file",
+          "description": "Image for second form",
+          "label": "Image form 2"
+        },
+        {
+          "identifier": "book_appointment",
+          "type": "checkbox",
+          "description": "Enable book appointment",
+          "label": "Enable Book Appointment",
+          "value": false
+        },
+        {
+          "identifier": "additional_entry_url",
+          "type": "text",
+          "description": "Additional URL to show",
+          "label": "Additional entry URL",
+          "value": "http://www.zendesk.com"
+        },
+        {
+          "identifier": "additional_entry_title",
+          "type": "text",
+          "description": "Title of additional entry",
+          "label": "Additional Entry Title",
+          "value": "Go to Zendesk"
+        },
+        {
+          "identifier": "additional_entry_image",
+          "type": "file",
+          "description": "Image for additional entry",
+          "label": "Additional Entry Image"
+        }
+      ]
+    },
+    {
+      "label": "CX2022 - Footer",
+      "variables": [
+        {
+          "identifier": "footer",
+          "type": "checkbox",
+          "description": "Enable custom footer",
+          "label": "Custom footer",
+          "value": true
+        },
+        {
+          "identifier": "footer_img",
+          "type": "file",
+          "description": "Image of the custom footer",
+          "label": "Footer image"
+        },
+        {
+          "identifier": "footer_img_size",
+          "type": "range",
+          "description": "Size of the custom footer image",
+          "label": "Footer image size",
+          "value": 64,
+          "min": 1,
+          "max": 1160
+        },
+        {
+          "identifier": "footer_bg_color",
+          "type": "color",
+          "description": "Background color of the custom footer",
+          "label": "Footer bg color",
+          "value": "rgba(248, 247, 248, 1)"
+        }
+      ]
+    },
+    {
+      "label": "Main colors",
+      "variables": [
+        {
+          "identifier": "brand_color",
+          "type": "color",
+          "description": "Brand color for major navigational elements",
+          "label": "Brand color",
+          "value": "rgba(102, 102, 103, 1)"
+        },
+        {
+          "identifier": "brand_text_color",
+          "type": "color",
+          "description": "Brand color for hover and active states",
+          "label": "Brand text color",
+          "value": "rgba(255, 255, 255, 1)"
+        },
+        {
+          "identifier": "text_color",
+          "type": "color",
+          "description": "Text color for body and heading elements",
+          "label": "Text color",
+          "value": "rgba(102, 102, 103, 1)"
+        },
+        {
+          "identifier": "link_color",
+          "type": "color",
+          "description": "Text color for link elements",
+          "label": "Link color",
+          "value": "rgba(213, 22, 24, 1)"
+        },
+        {
+          "identifier": "background_color",
+          "type": "color",
+          "description": "Background color of your Help Center",
+          "label": "Background color",
+          "value": "rgba(255, 255, 255, 1)"
+        }
+      ]
+    },
+    {
+      "label": "Fonts",
+      "variables": [
+        {
+          "identifier": "heading_font",
+          "type": "list",
+          "description": "Font for headings",
+          "label": "Heading Font",
+          "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif",
+          "options": [
+            {
+              "label": "System",
+              "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+            },
+            {
+              "label": "Arial",
+              "value": "Arial, 'Helvetica Neue', Helvetica, sans-serif"
+            },
+            {
+              "label": "Arial Black",
+              "value": "'Arial Black', Arial, 'Helvetica Neue', Helvetica, sans-serif"
+            },
+            {
+              "label": "Baskerville",
+              "value": "Baskerville, 'Times New Roman', Times, serif"
+            },
+            {
+              "label": "Century Gothic",
+              "value": "'Century Gothic', AppleGothic, sans-serif"
+            },
+            {
+              "label": "Copperplate Light",
+              "value": "'Copperplate Light', 'Copperplate Gothic Light', serif"
+            },
+            {
+              "label": "Courier New",
+              "value": "'Courier New', Courier, monospace"
+            },
+            {
+              "label": "Futura",
+              "value": "Futura, 'Century Gothic', AppleGothic, sans-serif"
+            },
+            {
+              "label": "Garamond",
+              "value": "Garamond, 'Hoefler Text', 'Times New Roman', Times, serif"
+            },
+            {
+              "label": "Geneva",
+              "value": "Geneva, 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif"
+            },
+            {
+              "label": "Georgia",
+              "value": "Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif"
+            },
+            {
+              "label": "Helvetica",
+              "value": "Helvetica, Arial, sans-serif"
+            },
+            {
+              "label": "Helvetica Neue",
+              "value": "'Helvetica Neue', Arial, Helvetica, sans-serif"
+            },
+            {
+              "label": "Impact",
+              "value": "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif"
+            },
+            {
+              "label": "Lucida Grande",
+              "value": "'Lucida Grande', 'Lucida Sans', 'Lucida Sans Unicode', sans-serif"
+            },
+            {
+              "label": "Trebuchet MS",
+              "value": "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"
+            }
+          ]
+        },
+        {
+          "identifier": "heading_font_case",
+          "type": "list",
+          "description": "Font case for headings",
+          "label": "Headings font case",
+          "value": "uppercase",
+          "options": [
+            {
+              "label": "Default",
+              "value": "none"
+            },
+            {
+              "label": "Uppercase",
+              "value": "uppercase"
+            },
+            {
+              "label": "Lowercase",
+              "value": "lowercase"
+            },
+            {
+              "label": "Capitalize",
+              "value": "capitalize"
+            }
+          ]
+        },
+        {
+          "identifier": "text_font",
+          "type": "list",
+          "description": "Font for body text",
+          "label": "Text Font",
+          "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif",
+          "options": [
+            {
+              "label": "System",
+              "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+            },
+            {
+              "label": "Arial",
+              "value": "Arial, 'Helvetica Neue', Helvetica, sans-serif"
+            },
+            {
+              "label": "Arial Black",
+              "value": "'Arial Black', Arial, 'Helvetica Neue', Helvetica, sans-serif"
+            },
+            {
+              "label": "Baskerville",
+              "value": "Baskerville, 'Times New Roman', Times, serif"
+            },
+            {
+              "label": "Century Gothic",
+              "value": "'Century Gothic', AppleGothic, sans-serif"
+            },
+            {
+              "label": "Copperplate Light",
+              "value": "'Copperplate Light', 'Copperplate Gothic Light', serif"
+            },
+            {
+              "label": "Courier New",
+              "value": "'Courier New', Courier, monospace"
+            },
+            {
+              "label": "Futura",
+              "value": "Futura, 'Century Gothic', AppleGothic, sans-serif"
+            },
+            {
+              "label": "Garamond",
+              "value": "Garamond, 'Hoefler Text', 'Times New Roman', Times, serif"
+            },
+            {
+              "label": "Geneva",
+              "value": "Geneva, 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif"
+            },
+            {
+              "label": "Georgia",
+              "value": "Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif"
+            },
+            {
+              "label": "Helvetica",
+              "value": "Helvetica, Arial, sans-serif"
+            },
+            {
+              "label": "Helvetica Neue",
+              "value": "'Helvetica Neue', Arial, Helvetica, sans-serif"
+            },
+            {
+              "label": "Impact",
+              "value": "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif"
+            },
+            {
+              "label": "Lucida Grande",
+              "value": "'Lucida Grande', 'Lucida Sans', 'Lucida Sans Unicode', sans-serif"
+            },
+            {
+              "label": "Trebuchet MS",
+              "value": "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Alert message",
+      "variables": [
+        {
+          "identifier": "alert",
+          "type": "checkbox",
+          "description": "Enable alert message",
+          "label": "Alert",
+          "value": false
+        },
+        {
+          "identifier": "alert_bg_color",
+          "type": "color",
+          "description": "Background color of the alert message",
+          "label": "Alert background color",
+          "value": "rgba(6, 146, 29, 1)"
+        },
+        {
+          "identifier": "alert_txt_color",
+          "type": "color",
+          "description": "Text color of the alert message",
+          "label": "Alert text color",
+          "value": "rgba(255, 255, 255, 1)"
+        },
+        {
+          "identifier": "alert_txt_message",
+          "type": "text",
+          "description": "Alert text message",
+          "label": "Alert text message",
+          "value": "Status Message: All services are up and running."
+        }
+      ]
+    },
+    {
+      "label": "Header",
+      "variables": [
+        {
+          "identifier": "header_bg_color",
+          "type": "color",
+          "description": "Header background color",
+          "label": "Header bg color",
+          "value": "rgba(242, 242, 242, 0)"
+        },
+        {
+          "identifier": "header_height",
+          "type": "range",
+          "description": "Height of the header container",
+          "label": "Header height",
+          "value": 159,
+          "min": 50,
+          "max": 250
+        },
+        {
+          "identifier": "header_border_pos",
+          "type": "list",
+          "description": "Position of the header border",
+          "label": "Header border position",
+          "value": "1px 0 0 0",
+          "options": [
+            {
+              "label": "None",
+              "value": "0"
+            },
+            {
+              "label": "Top",
+              "value": "1px 0 0 0"
+            },
+            {
+              "label": "Bottom",
+              "value": "0 0 1px 0"
+            },
+            {
+              "label": "Both",
+              "value": "1px 0"
+            }
+          ]
+        },
+        {
+          "identifier": "header_border_color",
+          "type": "color",
+          "description": "Color of the header border",
+          "label": "Header border color",
+          "value": "rgba(219, 219, 219, 0)"
+        },
+        {
+          "identifier": "logo_height",
+          "type": "range",
+          "description": "Size of the logo",
+          "label": "Logo size",
+          "value": 121,
+          "min": 25,
+          "max": 150
+        },
+        {
+          "identifier": "header_font_case",
+          "type": "list",
+          "description": "Font case of the header menu",
+          "label": "Header font case",
+          "value": "none",
+          "options": [
+            {
+              "label": "Default",
+              "value": "none"
+            },
+            {
+              "label": "Uppercase",
+              "value": "uppercase"
+            },
+            {
+              "label": "Lowercase",
+              "value": "lowercase"
+            },
+            {
+              "label": "Capitalize",
+              "value": "capitalize"
+            }
+          ]
+        },
+        {
+          "identifier": "header_font_weight",
+          "type": "list",
+          "description": "Font weight of the header menu",
+          "label": "Header font weight",
+          "value": "600",
+          "options": [
+            {
+              "label": "Light",
+              "value": "300"
+            },
+            {
+              "label": "Normal",
+              "value": "normal"
+            },
+            {
+              "label": "Semi Bold",
+              "value": "600"
+            },
+            {
+              "label": "Bold",
+              "value": "900"
+            }
+          ]
+        },
+        {
+          "identifier": "additional_header",
+          "type": "checkbox",
+          "description": "Enable additional custom header",
+          "label": "Additional header",
+          "value": true
+        },
+        {
+          "identifier": "additional_header_bg",
+          "type": "color",
+          "description": "Background color of the additional header",
+          "label": "Additional header bg color",
+          "value": "rgba(235, 235, 235, 1)"
+        },
+        {
+          "identifier": "additional_header_pos",
+          "type": "list",
+          "description": "Position of the additional header",
+          "label": "Additional header position",
+          "value": "0",
+          "options": [
+            {
+              "label": "Before main header",
+              "value": "0"
+            },
+            {
+              "label": "After main header",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "identifier": "additional_header_img",
+          "type": "file",
+          "description": "Image of the additional header",
+          "label": "Additional header image"
+        },
+        {
+          "identifier": "additional_header_img_size",
+          "type": "range",
+          "description": "Image size of the additional header",
+          "label": "Additional header image size",
+          "value": 191,
+          "min": 1,
+          "max": 1160
+        },
+        {
+          "identifier": "additional_header_img_pos",
+          "type": "list",
+          "description": "Image position of the additional header",
+          "label": "Additional header image position",
+          "value": "0 0 0 auto",
+          "options": [
+            {
+              "label": "Left",
+              "value": "0 auto 0 0"
+            },
+            {
+              "label": "Center",
+              "value": "0 auto"
+            },
+            {
+              "label": "Right",
+              "value": "0 0 0 auto"
+            }
+          ]
+        },
+        {
+          "identifier": "additional_header_padding",
+          "type": "range",
+          "description": "Padding size of the additional header",
+          "label": "Additional header padding",
+          "value": 10,
+          "min": 0,
+          "max": 50
+        }
+      ]
+    },
+    {
+      "label": "Home page",
+      "variables": [
+        {
+          "identifier": "home_hero_img",
+          "type": "file",
+          "description": "Home hero image",
+          "label": "Home hero image"
+        },
+        {
+          "identifier": "home_hero_height",
+          "type": "range",
+          "description": "Height of the home hero container",
+          "label": "Hero height",
+          "value": 169,
+          "min": 100,
+          "max": 1000
+        },
+        {
+          "identifier": "home_hero_bg_size",
+          "type": "list",
+          "description": "Size of the home hero image",
+          "label": "Hero image size",
+          "value": "auto",
+          "options": [
+            {
+              "label": "Original size",
+              "value": "auto"
+            },
+            {
+              "label": "Cover entire container",
+              "value": "cover"
+            },
+            {
+              "label": "Fully visible",
+              "value": "contain"
+            }
+          ]
+        },
+        {
+          "identifier": "home_hero_bg_pos_h",
+          "type": "list",
+          "description": "Horizontal position of the home hero image",
+          "label": "Hero image horizontal position",
+          "value": "left",
+          "options": [
+            {
+              "label": "Left",
+              "value": "left"
+            },
+            {
+              "label": "Center",
+              "value": "center"
+            },
+            {
+              "label": "Right",
+              "value": "right"
+            }
+          ]
+        },
+        {
+          "identifier": "home_hero_bg_pos_v",
+          "type": "list",
+          "description": "Vertical position of the home hero image",
+          "label": "Hero image vertical position",
+          "value": "top",
+          "options": [
+            {
+              "label": "Top",
+              "value": "top"
+            },
+            {
+              "label": "Center",
+              "value": "center"
+            },
+            {
+              "label": "Bottom",
+              "value": "bottom"
+            }
+          ]
+        },
+        {
+          "identifier": "home_search_position",
+          "type": "list",
+          "description": "Position of the home hero search bar",
+          "label": "Search bar position",
+          "value": "10%",
+          "options": [
+            {
+              "label": "Top",
+              "value": "10%"
+            },
+            {
+              "label": "Center",
+              "value": "50%"
+            },
+            {
+              "label": "Bottom",
+              "value": "90%"
+            }
+          ]
+        },
+        {
+          "identifier": "home_search_shadow",
+          "type": "range",
+          "description": "Shadow size of the home hero search bar",
+          "label": "Search bar shadow size",
+          "value": 1,
+          "min": 0,
+          "max": 20
+        },
+        {
+          "identifier": "home_search_shadow_color",
+          "type": "color",
+          "description": "Shadow color of the home hero search bar",
+          "label": "Search bar shadow color",
+          "value": "rgba(0, 25, 71, 1)"
+        },
+        {
+          "identifier": "community_img",
+          "type": "file",
+          "description": "Community image (join the conversation)",
+          "label": "Community image"
+        },
+        {
+          "identifier": "community_img_size",
+          "type": "range",
+          "description": "Size of the Community image (join the conversation)",
+          "label": "Community image size",
+          "value": 150,
+          "min": 50,
+          "max": 600
+        }
+      ]
+    },
+    {
+      "label": "Category blocks",
+      "variables": [
+        {
+          "identifier": "blocks_padding",
+          "type": "range",
+          "description": "Padding size of the category blocks",
+          "label": "Blocks padding",
+          "value": 0,
+          "min": 0,
+          "max": 100
+        },
+        {
+          "identifier": "blocks_description",
+          "type": "list",
+          "description": "Show/hide item description",
+          "label": "Item description",
+          "value": "inline",
+          "options": [
+            {
+              "label": "Show",
+              "value": "inline"
+            },
+            {
+              "label": "Hide",
+              "value": "none"
+            }
+          ]
+        },
+        {
+          "identifier": "blocks_font_size",
+          "type": "range",
+          "description": "Title font size of the category blocks",
+          "label": "Item title font size",
+          "value": 21,
+          "min": 5,
+          "max": 50
+        },
+        {
+          "identifier": "blocks_font_case",
+          "type": "list",
+          "description": "Title font case of the category blocks",
+          "label": "Item title font case",
+          "value": "none",
+          "options": [
+            {
+              "label": "Default",
+              "value": "none"
+            },
+            {
+              "label": "Uppercase",
+              "value": "uppercase"
+            },
+            {
+              "label": "Lowercase",
+              "value": "lowercase"
+            },
+            {
+              "label": "Capitalize",
+              "value": "capitalize"
+            }
+          ]
+        },
+        {
+          "identifier": "blocks_font_weight",
+          "type": "list",
+          "description": "Title font weight of the category blocks",
+          "label": "Item title font weight",
+          "value": "600",
+          "options": [
+            {
+              "label": "Light",
+              "value": "300"
+            },
+            {
+              "label": "Normal",
+              "value": "normal"
+            },
+            {
+              "label": "Semi Bold",
+              "value": "600"
+            },
+            {
+              "label": "Bold",
+              "value": "900"
+            }
+          ]
+        },
+        {
+          "identifier": "blocks_txt_color",
+          "type": "color",
+          "description": "Text color of the category blocks",
+          "label": "Text color",
+          "value": "rgba(102, 102, 103, 1)"
+        },
+        {
+          "identifier": "blocks_txt_color_hover",
+          "type": "color",
+          "description": "Text color of the category blocks (hover state)",
+          "label": "Text color (hover)",
+          "value": "rgba(213, 22, 24, 1)"
+        },
+        {
+          "identifier": "blocks_bg_color_top",
+          "type": "color",
+          "description": "Blocks top gradient background color",
+          "label": "Top gradient bg color",
+          "value": "rgba(255, 255, 255, 1)"
+        },
+        {
+          "identifier": "blocks_bg_color_bottom",
+          "type": "color",
+          "description": "Blocks bottom gradient background color",
+          "label": "Bottom gradient bg color",
+          "value": "rgba(255, 255, 255, 1)"
+        },
+        {
+          "identifier": "blocks_bg_color_top_h",
+          "type": "color",
+          "description": "Blocks top gradient background color (hover state)",
+          "label": "Top gradient bg color (hover)",
+          "value": "rgba(8, 59, 102, 0)"
+        },
+        {
+          "identifier": "blocks_bg_color_bottom_h",
+          "type": "color",
+          "description": "Blocks bottom gradient background color (hover state)",
+          "label": "Bottom gradient bg color (hover)",
+          "value": "rgba(8, 59, 102, 0)"
+        },
+        {
+          "identifier": "blocks_border_color",
+          "type": "color",
+          "description": "Border color of the category blocks",
+          "label": "Border color",
+          "value": "rgba(102, 102, 103, 1)"
+        },
+        {
+          "identifier": "blocks_border_color_h",
+          "type": "color",
+          "description": "Border color of the category blocks (hover state)",
+          "label": "Border color (hover)",
+          "value": "rgba(102, 102, 103, 1)"
+        },
+        {
+          "identifier": "blocks_shadow",
+          "type": "range",
+          "description": "Shadow size of the category blocks (hover state)",
+          "label": "Shadow size (hover)",
+          "value": 0,
+          "min": 0,
+          "max": 20
+        },
+        {
+          "identifier": "blocks_shadow_color",
+          "type": "color",
+          "description": "Shadow color of the category blocks (hover state)",
+          "label": "Shadow color (hover)",
+          "value": "rgba(6, 45, 146, 1)"
+        }
+      ]
+    },
+    {
+      "label": "Category icons",
+      "variables": [
+        {
+          "identifier": "blocks_icons",
+          "type": "list",
+          "description": "Show/hide category icons",
+          "label": "Category icons",
+          "value": "block",
+          "options": [
+            {
+              "label": "Show",
+              "value": "block"
+            },
+            {
+              "label": "Hide",
+              "value": "none"
+            }
+          ]
+        },
+        {
+          "identifier": "blocks_icons_size",
+          "type": "range",
+          "description": "Size of the category icons",
+          "label": "Icon size",
+          "value": 82,
+          "min": 30,
+          "max": 200
+        },
+        {
+          "identifier": "blocks_icon_1",
+          "type": "file",
+          "description": "Home category icon #1",
+          "label": "Home category icon #1"
+        },
+        {
+          "identifier": "blocks_icon_2",
+          "type": "file",
+          "description": "Home category icon #2",
+          "label": "Home category icon #2"
+        },
+        {
+          "identifier": "blocks_icon_3",
+          "type": "file",
+          "description": "Home category icon #3",
+          "label": "Home category icon #3"
+        },
+        {
+          "identifier": "blocks_icon_4",
+          "type": "file",
+          "description": "Home category icon #4",
+          "label": "Home category icon #4"
+        },
+        {
+          "identifier": "blocks_icon_5",
+          "type": "file",
+          "description": "Home category icon #5",
+          "label": "Home category icon #5"
+        },
+        {
+          "identifier": "blocks_icon_6",
+          "type": "file",
+          "description": "Home category icon #6",
+          "label": "Home category icon #6"
+        },
+        {
+          "identifier": "blocks_icon_7",
+          "type": "file",
+          "description": "Home category icon #7",
+          "label": "Home category icon #7"
+        },
+        {
+          "identifier": "blocks_icon_8",
+          "type": "file",
+          "description": "Home category icon #8",
+          "label": "Home category icon #8"
+        },
+        {
+          "identifier": "blocks_icon_9",
+          "type": "file",
+          "description": "Home category icon #9",
+          "label": "Home category icon #9"
+        },
+        {
+          "identifier": "blocks_icon_10",
+          "type": "file",
+          "description": "Home category icon #10",
+          "label": "Home category icon #10"
+        }
+      ]
+    },
+    {
+      "label": "Community page",
+      "variables": [
+        {
+          "identifier": "community_hero_img",
+          "type": "file",
+          "description": "Default community hero image",
+          "label": "Community hero image"
+        },
+        {
+          "identifier": "community_hero_height",
+          "type": "range",
+          "description": "Height of the Community hero container",
+          "label": "Hero container height",
+          "value": 161,
+          "min": 100,
+          "max": 1000
+        },
+        {
+          "identifier": "community_hero_bg_size",
+          "type": "list",
+          "description": "Size of the Community hero image",
+          "label": "Hero image size",
+          "value": "auto",
+          "options": [
+            {
+              "label": "Original size",
+              "value": "auto"
+            },
+            {
+              "label": "Cover entire container",
+              "value": "cover"
+            },
+            {
+              "label": "Fully visible",
+              "value": "contain"
+            }
+          ]
+        },
+        {
+          "identifier": "community_hero_bg_pos_h",
+          "type": "list",
+          "description": "Horizontal position of the Community hero image",
+          "label": "Hero image horizontal position",
+          "value": "center",
+          "options": [
+            {
+              "label": "Left",
+              "value": "left"
+            },
+            {
+              "label": "Center",
+              "value": "center"
+            },
+            {
+              "label": "Right",
+              "value": "right"
+            }
+          ]
+        },
+        {
+          "identifier": "community_hero_bg_pos_v",
+          "type": "list",
+          "description": "Vertical position of the Community hero image",
+          "label": "Hero image vertical position",
+          "value": "top",
+          "options": [
+            {
+              "label": "Top",
+              "value": "top"
+            },
+            {
+              "label": "Center",
+              "value": "center"
+            },
+            {
+              "label": "Bottom",
+              "value": "bottom"
+            }
+          ]
+        },
+        {
+          "identifier": "community_search_position",
+          "type": "list",
+          "description": "Position of the Community hero search bar",
+          "label": "Search bar position",
+          "value": "10%",
+          "options": [
+            {
+              "label": "Top",
+              "value": "10%"
+            },
+            {
+              "label": "Center",
+              "value": "50%"
+            },
+            {
+              "label": "Bottom",
+              "value": "90%"
+            }
+          ]
+        },
+        {
+          "identifier": "community_search_shadow",
+          "type": "range",
+          "description": "Shadow size of the Community hero search bar",
+          "label": "Search bar shadow size",
+          "value": 5,
+          "min": 0,
+          "max": 20
+        },
+        {
+          "identifier": "community_search_shadow_color",
+          "type": "color",
+          "description": "Shadow color of the Community hero search bar",
+          "label": "Search bar shadow color",
+          "value": "rgba(6, 45, 146, 1)"
+        },
+        {
+          "identifier": "blocks_icon_default",
+          "type": "file",
+          "description": "Community category icon",
+          "label": "Community category icon"
+        }
+      ]
+    },
+    {
+      "label": "Footer",
+      "variables": [
+        {
+          "identifier": "footer_border_pos",
+          "type": "list",
+          "description": "Border position of the custom footer",
+          "label": "Footer border position",
+          "value": "1px 0",
+          "options": [
+            {
+              "label": "None",
+              "value": "0"
+            },
+            {
+              "label": "Top",
+              "value": "1px 0 0 0"
+            },
+            {
+              "label": "Bottom",
+              "value": "0 0 1px 0"
+            },
+            {
+              "label": "Both",
+              "value": "1px 0"
+            }
+          ]
+        },
+        {
+          "identifier": "footer_border_color",
+          "type": "color",
+          "description": "Border color of the custom footer",
+          "label": "Footer border color",
+          "value": "rgba(248, 247, 248, 1)"
+        },
+        {
+          "identifier": "footer_img_pos",
+          "type": "list",
+          "description": "Position of the custom footer image",
+          "label": "Footer image position",
+          "value": "0 auto",
+          "options": [
+            {
+              "label": "Left",
+              "value": "0 auto 0 0"
+            },
+            {
+              "label": "Center",
+              "value": "0 auto"
+            },
+            {
+              "label": "Right",
+              "value": "0 0 0 auto"
+            }
+          ]
+        },
+        {
+          "identifier": "footer_padding",
+          "type": "range",
+          "description": "Padding size of the custom footer",
+          "label": "Footer padding",
+          "value": 0,
+          "min": 0,
+          "max": 100
+        },
+        {
+          "identifier": "additional_footer",
+          "type": "checkbox",
+          "description": "Enable additional custom footer",
+          "label": "Additional footer",
+          "value": false
+        },
+        {
+          "identifier": "additional_footer_bg_color",
+          "type": "color",
+          "description": "Background color of the additional footer",
+          "label": "Additional footer bg color",
+          "value": "rgba(247, 247, 247, 1)"
+        },
+        {
+          "identifier": "additional_footer_img",
+          "type": "file",
+          "description": "Image of the additional footer",
+          "label": "Additional footer image"
+        },
+        {
+          "identifier": "additional_footer_img_size",
+          "type": "range",
+          "description": "Size of the additional footer image",
+          "label": "Additional footer image size",
+          "value": 1160,
+          "min": 1,
+          "max": 1160
+        },
+        {
+          "identifier": "additional_footer_img_pos",
+          "type": "list",
+          "description": "Position of the additional footer image",
+          "label": "Additional footer image position",
+          "value": "0 auto",
+          "options": [
+            {
+              "label": "Left",
+              "value": "0 auto 0 0"
+            },
+            {
+              "label": "Center",
+              "value": "0 auto"
+            },
+            {
+              "label": "Right",
+              "value": "0 0 0 auto"
+            }
+          ]
+        },
+        {
+          "identifier": "additional_footer_padding",
+          "type": "range",
+          "description": "Padding size of the additional footer",
+          "label": "Additional footer padding",
+          "value": 50,
+          "min": 0,
+          "max": 100
+        }
+      ]
+    },
+    {
+      "label": "Search settings",
+      "variables": [
+        {
+          "identifier": "instant_search",
+          "type": "checkbox",
+          "description": "Show suggested articles on search",
+          "label": "Instant search",
+          "value": true
+        },
+        {
+          "identifier": "scoped_kb_search",
+          "type": "checkbox",
+          "description": "Search results are confined to the category the user is in",
+          "label": "Scoped search in Knowledge Base",
+          "value": true
+        },
+        {
+          "identifier": "scoped_community_search",
+          "type": "checkbox",
+          "description": "Search results are confined to the topic the user is in",
+          "label": "Scoped search in Community",
+          "value": false
+        }
+      ]
+    },
+    {
+      "label": "Home page elements",
+      "variables": [
+        {
+          "identifier": "show_recent_activity",
+          "type": "checkbox",
+          "description": "Show recent activity on home page",
+          "label": "Recent activity",
+          "value": false
+        }
+      ]
+    },
+    {
+      "label": "Article page elements",
+      "variables": [
+        {
+          "identifier": "show_articles_in_section",
+          "type": "checkbox",
+          "description": "Show sidebar of articles in section",
+          "label": "Articles in section",
+          "value": false
+        },
+        {
+          "identifier": "show_article_author",
+          "type": "checkbox",
+          "description": "Show author image and name",
+          "label": "Author",
+          "value": false
+        },
+        {
+          "identifier": "show_article_comments",
+          "type": "checkbox",
+          "description": "Show comments on articles",
+          "label": "Comments",
+          "value": false
+        },
+        {
+          "identifier": "show_follow_article",
+          "type": "checkbox",
+          "description": "Users can follow a specific article",
+          "label": "Follow",
+          "value": false
+        },
+        {
+          "identifier": "show_recently_viewed_articles",
+          "type": "checkbox",
+          "description": "Show recently viewed articles",
+          "label": "Recently viewed",
+          "value": false
+        },
+        {
+          "identifier": "show_related_articles",
+          "type": "checkbox",
+          "description": "Show related articles",
+          "label": "Related articles",
+          "value": false
+        },
+        {
+          "identifier": "show_article_sharing",
+          "type": "checkbox",
+          "description": "Show social media sharing on article",
+          "label": "Social sharing",
+          "value": false
+        }
+      ]
+    },
+    {
+      "label": "Section page elements",
+      "variables": [
+        {
+          "identifier": "show_follow_section",
+          "type": "checkbox",
+          "description": "Users can follow a specific section",
+          "label": "Follow",
+          "value": false
+        }
+      ]
+    },
+    {
+      "label": "Community post elements",
+      "variables": [
+        {
+          "identifier": "show_follow_post",
+          "type": "checkbox",
+          "description": "Users can follow a specific post",
+          "label": "Follow",
+          "value": true
+        },
+        {
+          "identifier": "show_post_sharing",
+          "type": "checkbox",
+          "description": "Show social media sharing on post",
+          "label": "Social sharing",
+          "value": true
+        }
+      ]
+    },
+    {
+      "label": "Community topic elements",
+      "variables": [
+        {
+          "identifier": "show_follow_topic",
+          "type": "checkbox",
+          "description": "Users can follow a specific topic",
+          "label": "Follow",
+          "value": false
+        }
+      ]
+    }
+  ]
+}
