@@ -47,13 +47,13 @@
       	{{/if}}
         
         <!-- Book Appointment -->
-        {{#if settings.book_appointment}}
+        {{#if settings.book_appointment_url}}
           <li class="cx2022-blocks-item appointment-block">
-            
+            <a href='{{settings.book_appointment_url}}' class="cx2022-blocks-item-link">
               <span class="cx2022-blocks-item-title">
-                Book Appointment
+                {{settings.book_appointment_title}}
               </span>
-            
+            </a>            
         	</li>  
       	{{/if}}
         

@@ -1,7 +1,7 @@
 {
-  "name": "Barista 4",
+  "name": "CX 2022",
   "author": "Marcelo De Bortoli, Ingmar Peters",
-  "version": "1.0.3",
+  "version": "1.1.1",
   "api_version": 2,
   "default_locale": "en-us",
   "settings": [
@@ -25,14 +25,14 @@
           "type": "color",
           "description": "Font color of the header menu",
           "label": "Header font color",
-          "value": "rgba(255, 255, 255, 1)"
+          "value": "rgba(3, 54, 61, 1)"
         },
         {
           "identifier": "menu_font_color",
           "type": "color",
           "description": "Font color of the menu and search box",
           "label": "Menue font color",
-          "value": "rgba(255, 255, 255, 1)"
+          "value": "rgba(3, 54, 61, 1)"
         }
       ]
     },
@@ -51,7 +51,7 @@
           "type": "text",
           "description": "The link of menu item #1",
           "label": "Menu URL",
-          "value": "https://z3n-cx2022.zendesk.com/hc/de"
+          "value": "https://z3n-eventsupport.zendesk.com/hc"
         },
         {
           "identifier": "menu_title_2",
@@ -79,7 +79,7 @@
           "type": "text",
           "description": "The link of menu item #3",
           "label": "Menu URL",
-          "value": "http://www.ipeters.de"
+          "value": "https://z3n-dumpling.zendesk.com/hc"
         },
         {
           "identifier": "menu_title_4",
@@ -121,7 +121,7 @@
           "type": "text",
           "description": "The link of menu item #6",
           "label": "Menu URL",
-          "value": "http://www.ipeters.de"
+          "value": "https://z3n-blackboard.zendesk.com/hc"
         },
         {
           "identifier": "menu_title_7",
@@ -135,7 +135,7 @@
           "type": "text",
           "description": "The link of menu item #7",
           "label": "Menu URL",
-          "value": "http://www.ipeters.de"
+          "value": "https://z3n-healthgarden.zendesk.com/"
         },
         {
           "identifier": "menu_title_8",
@@ -149,7 +149,7 @@
           "type": "text",
           "description": "The link of menu item #8",
           "label": "Menu URL",
-          "value": "http://www.ipeters.de"
+          "value": "https://z3n-streetartwall.zendesk.com/hc"
         }
       ]
     },
@@ -164,6 +164,12 @@
           "value": true
         },
         {
+          "identifier": "faq_image",
+          "type": "file",
+          "description": "FAQ Image",
+          "label": "FAQ Image"
+        },
+        {
           "identifier": "form1_url",
           "type": "text",
           "description": "URL to first form",
@@ -175,7 +181,7 @@
           "type": "text",
           "description": "Title of first form",
           "label": "Title form 1",
-          "value": "Kaffee bestellen"
+          "value": "Bestellung"
         },
         {
           "identifier": "form1_image",
@@ -188,7 +194,7 @@
           "type": "text",
           "description": "URL to second form",
           "label": "URL form 2",
-          "value": "requests/new"
+          "value": ""
         },
         {
           "identifier": "form2_title",
@@ -204,11 +210,24 @@
           "label": "Image form 2"
         },
         {
-          "identifier": "book_appointment",
-          "type": "checkbox",
-          "description": "Enable book appointment",
-          "label": "Enable Book Appointment",
-          "value": false
+          "identifier": "book_appointment_title",
+          "type": "text",
+          "description": "Book appointment",
+          "label": "Book Appointment Title",
+          "value": "Termin buchen"
+        },
+        {
+          "identifier": "book_appointment_url",
+          "type": "text",
+          "description": "Book appointment URL",
+          "label": "Book appointment URL",
+          "value": ""
+        },
+        {
+          "identifier": "book_appointment_image",
+          "type": "file",
+          "description": "Image for book appointment",
+          "label": "Book Appointment Image"
         },
         {
           "identifier": "additional_entry_url",
@@ -262,7 +281,7 @@
           "type": "color",
           "description": "Background color of the custom footer",
           "label": "Footer bg color",
-          "value": "rgba(248, 247, 248, 1)"
+          "value": "rgba(214, 238, 241, 1)"
         }
       ]
     },
@@ -274,21 +293,21 @@
           "type": "color",
           "description": "Brand color for major navigational elements",
           "label": "Brand color",
-          "value": "rgba(102, 102, 103, 1)"
+          "value": "rgba(3, 54, 61, 1)"
         },
         {
           "identifier": "brand_text_color",
           "type": "color",
           "description": "Brand color for hover and active states",
           "label": "Brand text color",
-          "value": "rgba(255, 255, 255, 1)"
+          "value": "rgba(250, 250, 255, 1)"
         },
         {
           "identifier": "text_color",
           "type": "color",
           "description": "Text color for body and heading elements",
           "label": "Text color",
-          "value": "rgba(102, 102, 103, 1)"
+          "value": "rgba(3, 54, 61, 1)"
         },
         {
           "identifier": "link_color",
@@ -302,7 +321,7 @@
           "type": "color",
           "description": "Background color of your Help Center",
           "label": "Background color",
-          "value": "rgba(255, 255, 255, 1)"
+          "value": "rgba(214, 238, 241, 1)"
         }
       ]
     },
@@ -523,14 +542,14 @@
           "type": "color",
           "description": "Header background color",
           "label": "Header bg color",
-          "value": "rgba(242, 242, 242, 0)"
+          "value": "rgba(214, 238, 241, 1)"
         },
         {
           "identifier": "header_height",
           "type": "range",
           "description": "Height of the header container",
           "label": "Header height",
-          "value": 159,
+          "value": 63,
           "min": 50,
           "max": 250
         },
@@ -564,14 +583,14 @@
           "type": "color",
           "description": "Color of the header border",
           "label": "Header border color",
-          "value": "rgba(219, 219, 219, 0)"
+          "value": "rgba(214, 238, 241, 1)"
         },
         {
           "identifier": "logo_height",
           "type": "range",
           "description": "Size of the logo",
           "label": "Logo size",
-          "value": 121,
+          "value": 94,
           "min": 25,
           "max": 150
         },
@@ -931,7 +950,7 @@
           "type": "color",
           "description": "Text color of the category blocks",
           "label": "Text color",
-          "value": "rgba(102, 102, 103, 1)"
+          "value": "rgba(3, 54, 61, 1)"
         },
         {
           "identifier": "blocks_txt_color_hover",
@@ -952,35 +971,35 @@
           "type": "color",
           "description": "Blocks bottom gradient background color",
           "label": "Bottom gradient bg color",
-          "value": "rgba(255, 255, 255, 1)"
+          "value": "rgba(214, 238, 241, 1)"
         },
         {
           "identifier": "blocks_bg_color_top_h",
           "type": "color",
           "description": "Blocks top gradient background color (hover state)",
           "label": "Top gradient bg color (hover)",
-          "value": "rgba(8, 59, 102, 0)"
+          "value": "rgba(214, 238, 241, 1)"
         },
         {
           "identifier": "blocks_bg_color_bottom_h",
           "type": "color",
           "description": "Blocks bottom gradient background color (hover state)",
           "label": "Bottom gradient bg color (hover)",
-          "value": "rgba(8, 59, 102, 0)"
+          "value": "rgba(214, 238, 241, 1)"
         },
         {
           "identifier": "blocks_border_color",
           "type": "color",
           "description": "Border color of the category blocks",
           "label": "Border color",
-          "value": "rgba(102, 102, 103, 1)"
+          "value": "rgba(3, 54, 61, 1)"
         },
         {
           "identifier": "blocks_border_color_h",
           "type": "color",
           "description": "Border color of the category blocks (hover state)",
           "label": "Border color (hover)",
-          "value": "rgba(102, 102, 103, 1)"
+          "value": "rgba(3, 54, 61, 1)"
         },
         {
           "identifier": "blocks_shadow",
@@ -1250,7 +1269,7 @@
           "type": "color",
           "description": "Border color of the custom footer",
           "label": "Footer border color",
-          "value": "rgba(248, 247, 248, 1)"
+          "value": "rgba(214, 238, 241, 1)"
         },
         {
           "identifier": "footer_img_pos",

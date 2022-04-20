@@ -197,8 +197,7 @@ template {
 }
 
 body {
-/*  background-color: $background_color; */
- 	background-color: rgb(248, 247, 248);
+  background-color: $background_color; 
   color: $text_color;
   font-family: $text_font;
   font-size: 15px;
@@ -805,9 +804,9 @@ input[type='submit'][disabled] {
 .header-container {
   display: flex;
   flex-flow: column;
-  background-image: url($logo);
+ /* background-image: url($logo); 
   background-size: cover;
-  background-position: bottom right;
+  background-position: bottom right; */
 }
 
 .main-header {
@@ -963,7 +962,7 @@ input[type='submit'][disabled] {
   width: auto;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 3000px) {
   .nav-wrapper .menu-button {
     display: none;
   }
@@ -1172,7 +1171,10 @@ input[type='submit'][disabled] {
 
 /***** Footer *****/
 .footer {
-  margin-top: 60px;
+ /* margin-top: 60px; */
+  bottom: 10px;
+  position: absolute;
+  width: 100%;
 }
 
 .custom-footer {
@@ -5287,21 +5289,21 @@ html[dir='rtl'] .notification-left-aligned {
 
 .cx2022-blocks-item {
 /*  position: relative; */
-  border: 1px solid $blocks_border_color;
-  border-radius: 10px;
+  border: 3px solid $blocks_border_color;
+  border-radius: 0px;
   box-sizing: border-box;
   color: $blocks_txt_color;
   display: flex;
   flex: 1 0 280px;
-  margin: 15px;
+  margin: 10px;
  /* max-width: 100%;
 	width: 100%; */
   text-align: left;
-/*  background-image: linear-gradient(
+  background-image: linear-gradient(
     $blocks_bg_color_top,
     $blocks_bg_color_bottom
   );
-  */
+  
   transition: all 0.2s;
   z-index: 1;
 }
@@ -5328,31 +5330,32 @@ html[dir='rtl'] .notification-left-aligned {
   }
 }
 
+
 .cx2022-blocks-item:hover,
 .cx2022-blocks-item:focus,
 .cx2022-blocks-item:active {
-  border: 1px solid $blocks_border_color_h;
-  color: $blocks_txt_color_hover;
-  box-shadow: 0px 0px #{$blocks_shadow}px 0px $blocks_shadow_color;
-  transition: all 0.2s;
+  border: 3px solid $blocks_border_color_h;
+  color: $blocks_txt_color_hover; 
+  box-shadow: 0px 0px #{$blocks_shadow}px 0px $blocks_shadow_color; 
+  transition: all 0.2s; 
 }
-
+/* Stupid thing
 .cx2022-blocks-item:hover::before,
 .cx2022-blocks-item:focus::before,
 .cx2022-blocks-item:active::before {
-  opacity: 1;
+  opacity: 1; 
 }
-
+*/
 .cx2022-blocks-item:hover *,
 .cx2022-blocks-item:focus *,
 .cx2022-blocks-item:active * {
-  color: $blocks_txt_color_hover;
-  text-decoration: none;
+  color: $blocks_txt_color_hover; 
+  text-decoration: none; 
 }
 
 .cx2022-blocks-item-internal {
   background-color: transparent;
-  border: 1px solid #ddd;
+  border: 3px solid #ddd;
 }
 
 .cx2022-blocks-item-internal .icon-lock {
@@ -5363,7 +5366,7 @@ html[dir='rtl'] .notification-left-aligned {
 }
 
 .cx2022-blocks-item-internal a {
-  color: $text_color;
+  color: $text_color; 
 }
 
 .cx2022-blocks-item-link {
@@ -5378,7 +5381,7 @@ html[dir='rtl'] .notification-left-aligned {
 
 .cx2022-blocks-item-link:hover,
 .cx2022-blocks-item-link:active {
-  text-decoration: none;
+  text-decoration: none; 
 }
 
 .cx2022-blocks-item-link:focus {
@@ -5391,7 +5394,7 @@ html[dir='rtl'] .notification-left-aligned {
   margin-bottom: 0;
   margin-left: 25%;
   font-size: #{$blocks_font_size}px;
-  text-transform: $blocks_font_case;
+  /*text-transform: $blocks_font_case;*/
   font-weight: $blocks_font_weight;
   position: absolute;
   z-index: -1;
@@ -5421,11 +5424,11 @@ html[dir='rtl'] .notification-left-aligned {
 }
 
 .faq-block{
-  background-image: url('$assets-faq-png');
+  background-image: url('$faq_image');
   background-size: 20%;
 	background-repeat: no-repeat;
   background-position: left center;
-  background-position-x: 5px;
+  background-position-x: 10px;
 }
 
 .form1-block{
@@ -5433,7 +5436,7 @@ html[dir='rtl'] .notification-left-aligned {
   background-size: 20%;
 	background-repeat: no-repeat;
   background-position: left center;
-  background-position-x: 5px;
+  background-position-x: 10px;
 }
 
 .form2-block{
@@ -5441,15 +5444,15 @@ html[dir='rtl'] .notification-left-aligned {
   background-size: 20%;
 	background-repeat: no-repeat;
   background-position: left center;
-  background-position-x: 5px;
+  background-position-x: 10px;
 }
 
 .appointment-block{
-  background-image: url('$assets-calendar-png');
+  background-image: url('$book_appointment_image');
   background-size: 20%;
 	background-repeat: no-repeat;
   background-position: left center;
-  background-position-x: 5px;
+  background-position-x: 10px;
 }
 
 .additional-entry-block{
@@ -5457,7 +5460,7 @@ html[dir='rtl'] .notification-left-aligned {
   background-size: 20%;
 	background-repeat: no-repeat;
   background-position: left center;
-  background-position-x: 5px;
+  background-position-x: 10px;
 }
 
 .cx2022-blocks-item-link {
