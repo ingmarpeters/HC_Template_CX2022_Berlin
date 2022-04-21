@@ -1,4 +1,4 @@
-<h1 class="visibility-hidden">{{ help_center.name }}</h1>
+<h2 class="visibility-hidden">{{ help_center.name }}</h2>
 
 <div class="container">
   <section class="section knowledge-base">
@@ -29,7 +29,10 @@
         	<li class="cx2022-blocks-item form1-block">
             <a href='{{settings.form1_url}}' class="cx2022-blocks-item-link">
               <span class="cx2022-blocks-item-title">
-                {{settings.form1_title}}
+                 	{{#is help_center.locale 'de'}}{{settings.form1_title}}{{/is}}
+                 	{{#is help_center.locale 'de-de'}}{{settings.form1_title}}{{/is}}
+                	{{#is help_center.locale 'en-gb'}}{{settings.form1_title_en}}{{/is}}
+                	{{#is help_center.locale 'en-us'}}{{settings.form1_title_en}}{{/is}}
               </span>
             </a>
         	</li>
@@ -40,7 +43,10 @@
           <li class="cx2022-blocks-item form2-block">
             <a href='{{settings.form2_url}}' class="cx2022-blocks-item-link">
               <span class="cx2022-blocks-item-title">
-                {{settings.form2_title}}
+                  {{#is help_center.locale 'de'}}{{settings.form2_title}}{{/is}}
+                 	{{#is help_center.locale 'de-de'}}{{settings.form2_title}}{{/is}}
+                	{{#is help_center.locale 'en-gb'}}{{settings.form2_title_en}}{{/is}}
+                	{{#is help_center.locale 'en-us'}}{{settings.form2_title_en}}{{/is}}
               </span>
             </a>            
         	</li>
@@ -51,7 +57,10 @@
           <li class="cx2022-blocks-item appointment-block">
             <a href='{{settings.book_appointment_url}}' class="cx2022-blocks-item-link">
               <span class="cx2022-blocks-item-title">
-                {{settings.book_appointment_title}}
+                  {{#is help_center.locale 'de'}}{{settings.book_appointment_title}}{{/is}}
+                 	{{#is help_center.locale 'de-de'}}{{settings.book_appointment_title}}{{/is}}
+                	{{#is help_center.locale 'en-gb'}}{{settings.book_appointment_title_en}}{{/is}}
+                	{{#is help_center.locale 'en-us'}}{{settings.book_appointment_title_en}}{{/is}}                
               </span>
             </a>            
         	</li>  
@@ -62,7 +71,10 @@
           <li class="cx2022-blocks-item additional-entry-block">
             <a href='{{settings.additional_entry_url}}' class="cx2022-blocks-item-link">
               <span class="cx2022-blocks-item-title">
-                {{settings.additional_entry_title}}
+                  {{#is help_center.locale 'de'}}{{settings.additional_entry_title}}{{/is}}
+                 	{{#is help_center.locale 'de-de'}}{{settings.additional_entry_title}}{{/is}}
+                	{{#is help_center.locale 'en-gb'}}{{settings.additional_entry_title_en}}{{/is}}
+                	{{#is help_center.locale 'en-us'}}{{settings.additional_entry_title_en}}{{/is}}  
               </span>
             </a>            
         	</li>
