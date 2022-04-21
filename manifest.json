@@ -1,7 +1,7 @@
 {
   "name": "CX 2022",
   "author": "Marcelo De Bortoli, Ingmar Peters",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "api_version": 2,
   "default_locale": "en-us",
   "settings": [
@@ -39,6 +39,20 @@
     {
       "label": "CX2022 - Header - Menu",
       "variables": [
+        {
+          "identifier": "menu_title_0",
+          "type": "text",
+          "description": "The title of menu item #0",
+          "label": "Menu title",
+          "value": "Hauptmenue"
+        },
+        {
+          "identifier": "menu_link_0",
+          "type": "text",
+          "description": "The link of menu item #0",
+          "label": "Menu URL",
+          "value": "https://z3n-cx2022.zendesk.com/hc"
+        },
         {
           "identifier": "menu_title_1",
           "type": "text",
@@ -86,14 +100,14 @@
           "type": "text",
           "description": "The title of menu item #4",
           "label": "Menu title",
-          "value": "Liq Bar"
+          "value": "The Liqbar"
         },
         {
           "identifier": "menu_link_4",
           "type": "text",
           "description": "The link of menu item #4",
           "label": "Menu URL",
-          "value": "http://www.ipeters.de"
+          "value": "https://z3n-liqbar.zendesk.com/hc"
         },
         {
           "identifier": "menu_title_5",
@@ -107,7 +121,7 @@
           "type": "text",
           "description": "The link of menu item #5",
           "label": "Menu URL",
-          "value": "http://www.ipeters.de"
+          "value": "https://z3n-techforgood.zendesk.com/hc"
         },
         {
           "identifier": "menu_title_6",
