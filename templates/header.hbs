@@ -12,6 +12,7 @@
             </svg>
           </button>
           <div class="dropdown-menu" id="user-nav">
+            {{#if settings.menu_link_0}} <a href="{{settings.menu_link_0}}" role="menuitem">{{settings.menu_title_0}}</a> {{/if}}
             {{#if settings.menu_link_1}} <a href="{{settings.menu_link_1}}" role="menuitem">{{settings.menu_title_1}}</a> {{/if}}
             {{#if settings.menu_link_2}} <a href="{{settings.menu_link_2}}" role="menuitem">{{settings.menu_title_2}}</a> {{/if}}
             {{#if settings.menu_link_3}} <a href="{{settings.menu_link_3}}" role="menuitem">{{settings.menu_title_3}}</a> {{/if}}
