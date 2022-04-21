@@ -5497,3 +5497,10 @@ html[dir='rtl'] .notification-left-aligned {
     margin: 0 -15px;
   }
 }
+
+.cx2022-title {
+  font-family: "Segoe UI",Arial,sans-serif;
+  font-weight: 400;
+  text-align: center;
+  margin: 1px 0;
+}
