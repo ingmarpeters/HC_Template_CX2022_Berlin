@@ -1,7 +1,7 @@
 {
   "name": "CX 2022",
   "author": "Marcelo De Bortoli, Ingmar Peters",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "api_version": 2,
   "default_locale": "en-us",
   "settings": [
@@ -221,7 +221,7 @@
           "type": "text",
           "description": "Book appointment URL",
           "label": "Book appointment URL",
-          "value": ""
+          "value": "http://zendesk.com"
         },
         {
           "identifier": "book_appointment_image",
@@ -234,7 +234,7 @@
           "type": "text",
           "description": "Additional URL to show",
           "label": "Additional entry URL",
-          "value": "http://www.zendesk.com"
+          "value": ""
         },
         {
           "identifier": "additional_entry_title",

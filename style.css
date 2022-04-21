@@ -1171,9 +1171,9 @@ input[type='submit'][disabled] {
 
 /***** Footer *****/
 .footer {
- /* margin-top: 60px; */
+  margin-top: 60px; 
   bottom: 10px;
-  position: absolute;
+  position: relative;
   width: 100%;
 }
 
