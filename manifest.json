@@ -1,7 +1,7 @@
 {
-  "name": "CX2022 - Berlin",
+  "name": "CX Trends 2022 - Berlin",
   "author": "Marcelo De Bortoli, Ingmar Peters",
-  "version": "1.1.7",
+  "version": "1.2.0",
   "api_version": 2,
   "default_locale": "en-us",
   "settings": [
@@ -44,7 +44,7 @@
           "type": "text",
           "description": "The title of menu item #0",
           "label": "Menu title",
-          "value": "Hauptmenue"
+          "value": "CX Trends 2022"
         },
         {
           "identifier": "menu_link_0",
