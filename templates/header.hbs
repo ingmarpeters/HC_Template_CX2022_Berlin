@@ -2,7 +2,9 @@
 
 <header class="header-container">  
   <div class="main-header">
-    <div class="cx2022-title"><h4>{{ help_center.name }}</h4></div>
+    {{#unless settings.launch_page}}
+      <div class="cx2022-title"><h4>{{ help_center.name }}</h4></div>
+    {{/unless}}
     <div class="header">
       <div class="w3-col s1">
         <div class="nav-wrapper">
@@ -54,14 +56,18 @@
         </div>
       </div>
       <div class="w3-col s10">
-         <div class="hero-inner">
-            <h2 class="visibility-hidden">{{ t 'search' }}</h2>
-            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-icon" aria-hidden="true">
-              <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor"/>
-              <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5"/>
-            </svg>
-            {{search submit=false instant=settings.instant_search class='search search-full'}}
-          </div>
+        {{#if settings.launch_page}}
+          <div class="cx2022-title"><h4>{{ help_center.name }}</h4></div>
+        {{else}}
+          <div class="hero-inner">
+              <h2 class="visibility-hidden">{{ t 'search' }}</h2>
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-icon" aria-hidden="true">
+                <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor"/>
+                <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5"/>
+              </svg>
+              {{search submit=false instant=settings.instant_search class='search search-full'}}
+            </div>
+        {{/if}}  
       </div>
     </div>  
   </div>
