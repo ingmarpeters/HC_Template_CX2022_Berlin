@@ -5421,23 +5421,38 @@
  
  .faq-block{
    background-image: url('$faq_image');  
- }
+   background-size: 80px;
+   background-repeat: no-repeat; 
+   background-position: left 10px center;
+}
  
  .form1-block{
    background-image: url('$form1_image');
- }
+   background-size: 60px;
+   background-repeat: no-repeat; 
+   background-position: left 15px center;
+}
  
  .form2-block{
    background-image: url('$form2_image');
- }
+   background-size: 60px;
+   background-repeat: no-repeat; 
+   background-position: left 15px center;
+}
  
  .appointment-block{
    background-image: url('$book_appointment_image');
- }
+   background-size: 80px;
+   background-repeat: no-repeat; 
+   background-position: left 10px center;
+}
  
  .additional-entry-block{
    background-image: url('$additional_entry_image');
- }
+   background-size: 80px;
+   background-repeat: no-repeat; 
+   background-position: left 10px center;
+}
  
  .cx2022-blocks-item-link {
    display: flex;
@@ -5482,46 +5497,58 @@
  
  .brand_block_1 {
    background-image: url('$menu_image_1');
- }
- 
- .brand_block_2 {
-   background-image: url('$menu_image_2');
- }
- 
- .brand_block_3 {
-   background-image: url('$menu_image_3');
- }
- 
- .brand_block_4 {
-   background-image: url('$menu_image_4');
- }
- 
- .brand_block_5 {
-   background-image: url('$menu_image_5');
- }
- 
- .brand_block_6 {
-   background-image: url('$menu_image_6');
- }
- 
- .brand_block_7 {
-   background-image: url('$menu_image_7');
- }
- 
- .brand_block_8 {
-   background-image: url('$menu_image_8');
- }
- 
- .block_left {
    background-size: 80px;
    background-repeat: no-repeat; 
    background-position: left 10px center;
- }
+}
  
- .block_right {
+ .brand_block_2 {
+   background-image: url('$menu_image_2');
    background-size: 80px;
    background-repeat: no-repeat; 
-   background-position: right 10px center;
+   background-position: left 10px center;
+}
+ 
+ .brand_block_3 {
+   background-image: url('$menu_image_3');
+   background-size: 80px;
+   background-repeat: no-repeat; 
+   background-position: left 10px center;
+}
+ 
+ .brand_block_4 {
+   background-image: url('$menu_image_4');
+   background-size: 80px;
+   background-repeat: no-repeat; 
+   background-position: left 10px center;
+}
+ 
+ .brand_block_5 {
+   background-image: url('$menu_image_5');
+   background-size: 80px;
+   background-repeat: no-repeat; 
+   background-position: left 10px center;
+}
+ 
+ .brand_block_6 {
+   background-image: url('$menu_image_6');
+   background-size: 80px;
+   background-repeat: no-repeat; 
+   background-position: left 10px center;
+}
+ 
+ .brand_block_7 {
+   background-image: url('$menu_image_7');
+   background-size: 80px;
+   background-repeat: no-repeat; 
+   background-position: left 10px center;
+}
+ 
+ .brand_block_8 {
+   background-image: url('$menu_image_8');
+   background-size: 80px;
+   background-repeat: no-repeat; 
+   background-position: left 10px center;
  }
  
  .cx2022-blocks-item-title-left {
