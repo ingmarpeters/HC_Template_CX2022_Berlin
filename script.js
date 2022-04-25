@@ -487,6 +487,10 @@ document.addEventListener('click', function (event) {
   }
 })
 
+// *****************************************************************************************************
+// *****************************************************************************************************
+// *****************************************************************************************************
+
 //Include Sunshine Conversations Web SDK
 !function(o,p,s,e,c){
   var i,a,h,u=[],d=[];function t(){var t="You must provide a supported major version.";try{if(!c)throw new Error(t);var e,n="https://cdn.smooch.io/",r="smooch";if((e="string"==typeof this.response?JSON.parse(this.response):this.response).url){var o=p.getElementsByTagName("script")[0],s=p.createElement("script");s.async=!0;var i=c.match(/([0-9]+)\.?([0-9]+)?\.?([0-9]+)?/),a=i&&i[1];if(i&&i[3])s.src=n+r+"."+c+".min.js";else{if(!(4<=a&&e["v"+a]))throw new Error(t);s.src=e["v"+a]}o.parentNode.insertBefore(s,o)}}catch(e){e.message===t&&console.error(e)}}o[s]={init:function(){i=arguments;var t={then:function(e){return d.push({type:"t",next:e}),t},catch:function(e){return d.push({type:"c",next:e}),t}};return t},on:function(){u.push(arguments)},render:function(){a=arguments},destroy:function(){h=arguments}},o.__onWebMessengerHostReady__=function(e){if(delete o.__onWebMessengerHostReady__,o[s]=e,i)for(var t=e.init.apply(e,i),n=0;n<d.length;n++){var r=d[n];t="t"===r.type?t.then(r.next):t.catch(r.next)}a&&e.render.apply(e,a),h&&e.destroy.apply(e,h);for(n=0;n<u.length;n++)e.on.apply(e,u[n])};var n=new XMLHttpRequest;n.addEventListener("load",t),n.open("GET","https://"+e+".webloader.smooch.io/",!0),n.responseType="json",n.send()
@@ -541,3 +545,170 @@ Smooch.on('widget:opened', function () {
            );
        }
 });
+
+
+// *****************************************************************************************************
+// *****************************************************************************************************
+// *****************************************************************************************************
+
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@ingmarpeters 
+mdebortoli
+/
+zendesk-ticket-subject-customizer
+Public
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+zendesk-ticket-subject-customizer/script.js /
+@mdebortoli
+mdebortoli First version
+Latest commit 6bf8984 on May 15, 2020
+ History
+ 1 contributor
+117 lines (93 sloc)  4.44 KB
+   
+////////////////////////////////////////////////////////////////////////////////
+// Ticket Subject/Description Customizer v1.0                                 //
+////////////////////////////////////////////////////////////////////////////////
+// This script allows you to hide the required subject/description fields in  //
+// a Zendesk contact form and replace them with any text and/or custom fields //
+////////////////////////////////////////////////////////////////////////////////
+// Developed by Marcelo De Bortoli (EMEA Solution Developer)                  //
+////////////////////////////////////////////////////////////////////////////////
+
+// Configuration
+////////////////////////////////////////////////////////////////////////////////
+
+const ticketFormConfig = [
+  {
+    // Set your ticket form ID
+    formId: 4710225526685, //Order Coffee
+
+    // Set your desired form subject
+    subject: `Neue Bestellung: {{4710342226205}}`,
+
+    // Set your desired form subject
+    description: `
+    	--- Eine neue Bestellung --- <br /> <br />		
+      Kaffee Variante: {{4710342226205}} <br />
+      Milch: {{4942215521181}} <br />
+      Kommentar: {{4920672149661}}`
+  }
+  // You can set rules for multiple forms by adding new objects to this variable.
+  // {
+  //   formId: 360000000000,
+  //   subject: 'This is the new subject of your second form',
+  //   description: 'This is the new description of your second form'
+  // }
+];
+
+
+
+// Do not change anything below this line
+////////////////////////////////////////////////////////////////////////////////
+
+document.addEventListener('DOMContentLoaded', function () {
+  if (document.getElementById('new_request') && ticketFormConfig) {
+    const formSelector = document.querySelector('.request_ticket_form_id select');
+    const currentForm = formSelector.options[formSelector.selectedIndex].value;
+
+    // Check if the current selected form is in the configuration array
+    const matchingForm = ticketFormConfig.find(o => o.formId == currentForm);
+
+    if (matchingForm) {
+      // Hide subject/description fields
+      document.querySelector('.request_subject').style.display = 'none';
+      document.querySelector('.request_description').style.display = 'none';
+			var inputs = document.getElementsByTagName('label');
+			console.log(inputs);
+      for(var i = 0; i < inputs.length; i++) {
+        if (inputs[i].outerText == "Anhänge(optional)"){
+          inputs[i].parentNode.style.display = 'none';
+        }        
+      }
+
+      // Replace subject/description values by the new data before form submission
+      document.querySelector('#new_request input[type=submit]').addEventListener('click', function (e) {
+        const newSubject = (matchingForm.subject ? getDynamicText(matchingForm.subject) : 'No subject');
+        const newDescription = (matchingForm.description ? getDynamicText(matchingForm.description) : 'No description');
+
+        document.getElementById('request_subject').value = newSubject;
+        document
+          .getElementById('request_description_ifr')
+          .contentWindow.document.querySelector('#tinymce').innerHTML =
+          newDescription
+      });
+    }
+  }
+});
+
+// Return dynamic text from custom field values.
+// Usage: Specify your text keeping the required label names between double curly braces.
+// Example: getDynamicText('New visit request to {{Store}} store at {{Preferred time slot}}')
+// Return example: 'New visit request to London store at 11:30'
+function getDynamicText(str) {
+  const labels = str.match(/{{([^}]*)}}/g);
+
+  if (labels) {
+    for (let i = 0; i < labels.length; i++) {
+      const labelName = labels[i].replace(/{{|}}/g, '');
+
+      const fieldId = getFieldIdByLabel(labelName);
+      const fieldValue = (!fieldId ? getFieldValueById(`request_custom_fields_${labelName}`) : getFieldValueById(fieldId));
+
+      const returnValue = (fieldValue ? fieldValue : undefined);
+
+      if (returnValue) {
+        str = str.replace(labels[i], returnValue);
+      }
+    }
+  }
+
+  return str;
+}
+
+// Get custom field value by its input ID
+// Usage example: getFieldValueById('request_custom_fields_360009915379')
+function getFieldValueById(id) {
+  const element = document.getElementById(id);
+
+  if (!element) {
+    return undefined;
+  }
+
+  const rawValue = element.value;
+  const fieldNames = JSON.parse(element.getAttribute('data-tagger'));
+
+  const fieldValue = (fieldNames ? fieldNames.find(o => o.value === rawValue) : rawValue);
+
+  return (fieldValue && fieldValue.label ? fieldValue.label : fieldValue);
+}
+
+// Get custom field ID by its label text
+// Usage example: getFieldIdByLabel('Store')
+// Return example: 'request_custom_fields_360009915379'
+function getFieldIdByLabel(label) {
+  const labelTags = document.getElementsByTagName('label');
+  let field = '';
+
+  for (let i = 0; i < labelTags.length; i++) {
+    if (labelTags[i].childNodes[0].textContent == label) {
+      field = labelTags[i];
+      break;
+    }
+  }
+
+  return (field.htmlFor ? field.htmlFor : undefined);
+}
