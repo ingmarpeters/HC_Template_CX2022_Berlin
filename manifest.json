@@ -253,6 +253,13 @@
           "value": "Bestellung"
         },
         {
+          "identifier": "form1_title_en",
+          "type": "text",
+          "description": "Title of first form (English)",
+          "label": "Title form 1 (English)",
+          "value": ""
+        },
+        {
           "identifier": "form1_image",
           "type": "file",
           "description": "Image for first form",
@@ -273,6 +280,13 @@
           "value": "Mehr Kaffee"
         },
         {
+          "identifier": "form2_title_en",
+          "type": "text",
+          "description": "Title of second form (English)",
+          "label": "Title form 2 (English)",
+          "value": ""
+        },
+        {
           "identifier": "form2_image",
           "type": "file",
           "description": "Image for second form",
@@ -284,6 +298,13 @@
           "description": "Book appointment title",
           "label": "Book Appointment Title",
           "value": "Termin buchen"
+        },
+        {
+          "identifier": "book_appointment_title_en",
+          "type": "text",
+          "description": "Book appointment title (English)",
+          "label": "Book Appointment Title (English)",
+          "value": ""
         },
         {
           "identifier": "book_appointment_url",
@@ -310,6 +331,13 @@
           "type": "text",
           "description": "Title of additional entry",
           "label": "Additional Entry Title",
+          "value": "Go to Zendesk"
+        },
+        {
+          "identifier": "additional_entry_title_en",
+          "type": "text",
+          "description": "Title of additional entry (English)",
+          "label": "Additional Entry Title (English)",
           "value": "Go to Zendesk"
         },
         {
