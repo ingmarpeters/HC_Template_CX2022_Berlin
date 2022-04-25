@@ -550,34 +550,6 @@ Smooch.on('widget:opened', function () {
 // *****************************************************************************************************
 // *****************************************************************************************************
 // *****************************************************************************************************
-
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@ingmarpeters 
-mdebortoli
-/
-zendesk-ticket-subject-customizer
-Public
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-zendesk-ticket-subject-customizer/script.js /
-@mdebortoli
-mdebortoli First version
-Latest commit 6bf8984 on May 15, 2020
- History
- 1 contributor
-117 lines (93 sloc)  4.44 KB
    
 ////////////////////////////////////////////////////////////////////////////////
 // Ticket Subject/Description Customizer v1.0                                 //
