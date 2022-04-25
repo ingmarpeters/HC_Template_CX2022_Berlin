@@ -1,7 +1,7 @@
 {
   "name": "CX Trends 2022 - Berlin",
   "author": "Marcelo De Bortoli, Ingmar Peters",
-  "version": "1.3.5",
+  "version": "1.3.6",
   "api_version": 2,
   "default_locale": "en-us",
   "settings": [
@@ -311,7 +311,7 @@
           "type": "text",
           "description": "Book appointment URL",
           "label": "Book appointment URL",
-          "value": "http://zendesk.com"
+          "value": "https://calendarhero.to/presentsberlin"
         },
         {
           "identifier": "book_appointment_image",
