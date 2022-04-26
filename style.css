@@ -695,6 +695,8 @@
  /***** Forms *****/
  .form {
    max-width: 650px;
+   position: relative;
+   z-index: -1;
  }
  
  .form-field ~ .form-field {
@@ -1182,6 +1184,8 @@
    padding: #{$footer_padding}px 0;
    border: 1px solid $footer_border_color;
    border-width: $footer_border_pos;
+   position: relative;
+   z-index: -1;
  }
  
  .footer img {
