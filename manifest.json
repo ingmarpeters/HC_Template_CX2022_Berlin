@@ -1,7 +1,7 @@
 {
   "name": "CX Trends 2022 - Berlin",
   "author": "Marcelo De Bortoli, Ingmar Peters",
-  "version": "1.3.7",
+  "version": "1.3.8",
   "api_version": 2,
   "default_locale": "en-us",
   "settings": [
@@ -158,7 +158,7 @@
           "type": "text",
           "description": "The link of menu item #5",
           "label": "Menu URL",
-          "value": "https://z3n-techforgood.zendesk.com/hc"
+          "value": "https://helpers.zendesk.com/techforgood"
         },
         {
           "identifier": "menu_title_6",

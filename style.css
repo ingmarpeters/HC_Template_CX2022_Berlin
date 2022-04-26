@@ -695,8 +695,6 @@
  /***** Forms *****/
  .form {
    max-width: 650px;
-   position: relative;
-   z-index: -1;
  }
  
  .form-field ~ .form-field {
@@ -739,6 +737,8 @@
    line-height: 40px;
    outline: none;
    vertical-align: middle;
+   position: inherit;
+   z-index: 0;
  }
  
  .form-field .nesty-input:focus {
@@ -746,6 +746,15 @@
    text-decoration: none;
  }
  
+ .form-field .nesty-input:after {
+  color: #999;
+  content: "▾";
+  line-height: 1em;
+  position: inherit;
+  right: 10px;
+  top: 25%;
+}
+
  .form-field .hc-multiselect-toggle:focus {
    outline: none;
    border: 1px solid $brand_color;
