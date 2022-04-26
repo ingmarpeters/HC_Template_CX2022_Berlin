@@ -2,73 +2,42 @@
 
 <header class="header-container">  
   <div class="main-header">
+    <div class="cx2022-title">
+      <h4>{{ help_center.name }}</h4>
+    </div>    
     {{#unless settings.launch_page}}
-      <div class="cx2022-title"><h4>{{ help_center.name }}</h4></div>
-    {{/unless}}
-    <div class="header">
-      <div class="w3-col s1">
-        <div class="nav-wrapper">
-          <button class="menu-button" aria-controls="user-nav" aria-expanded="false" aria-label="{{t 'toggle_navigation'}}">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16" class="icon-menu">
-              <path fill="none" stroke="currentColor" stroke-linecap="round" d="M1.5 3.5h13m-13 4h13m-13 4h13"/>
-            </svg>
-          </button>
-          <div class="dropdown-menu" id="user-nav">
-            {{#if settings.menu_link_0}} <a href="{{settings.menu_link_0}}" role="menuitem">{{settings.menu_title_0}}</a> {{/if}}
-            {{#if settings.menu_link_1}} <a href="{{settings.menu_link_1}}" role="menuitem">{{settings.menu_title_1}}</a> {{/if}}
-            {{#if settings.menu_link_2}} <a href="{{settings.menu_link_2}}" role="menuitem">{{settings.menu_title_2}}</a> {{/if}}
-            {{#if settings.menu_link_3}} <a href="{{settings.menu_link_3}}" role="menuitem">{{settings.menu_title_3}}</a> {{/if}}
-            {{#if settings.menu_link_4}} <a href="{{settings.menu_link_4}}" role="menuitem">{{settings.menu_title_4}}</a> {{/if}}
-            {{#if settings.menu_link_5}} <a href="{{settings.menu_link_5}}" role="menuitem">{{settings.menu_title_5}}</a> {{/if}}
-            {{#if settings.menu_link_6}} <a href="{{settings.menu_link_6}}" role="menuitem">{{settings.menu_title_6}}</a> {{/if}}
-            {{#if settings.menu_link_7}} <a href="{{settings.menu_link_7}}" role="menuitem">{{settings.menu_title_7}}</a> {{/if}}
-            {{#if settings.menu_link_8}} <a href="{{settings.menu_link_8}}" role="menuitem">{{settings.menu_title_8}}</a> {{/if}}
-          </div>
-        </div>   
-      </div>
-      <div class="w3-col s1">
-        <div class="nav-wrapper">
-          {{#if alternative_locales}}
-            <div class="dropdown language-selector">
-              <button class="dropdown-toggle" aria-haspopup="true">
-                <span>
-                    {{#is current_locale.name 'Deutsch'}}DE{{/is}}
-                    {{#is current_locale.name 'Deutsch (Deutschland)'}}DE{{/is}}
-                    {{#is current_locale.name 'English (GB)'}}EN{{/is}}
-                    {{#is current_locale.name 'English (US)'}}EN{{/is}}
-                </span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="dropdown-chevron-icon">
-                  <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/>
-                </svg>
-              </button>
-              <div class="dropdown-menu" id="lang-nav">
-                {{#each alternative_locales}}
-                  <a href="{{url}}" rel="nofollow" role="menuitem">
-                    {{#is name 'Deutsch'}}DE{{/is}}
-                    {{#is name 'Deutsch (Deutschland)'}}DE{{/is}}
-                    {{#is name 'English (GB)'}}EN{{/is}}                  
-                    {{#is name 'English (US)'}}EN{{/is}}                  
-                  </a>
-                {{/each}}
-              </div>
-            </div>
-          {{/if}}
-        </div>
-      </div>
-      <div class="w3-col s10">
-        {{#if settings.launch_page}}
-          <div class="cx2022-title"><h4>{{ help_center.name }}</h4></div>
-        {{else}}
-          <div class="hero-inner">
-              <h2 class="visibility-hidden">{{ t 'search' }}</h2>
-              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-icon" aria-hidden="true">
-                <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor"/>
-                <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5"/>
+      <div class="header">
+        <div class="w3-col s1">
+          <div class="nav-wrapper">
+            <button class="menu-button" aria-controls="user-nav" aria-expanded="false" aria-label="{{t 'toggle_navigation'}}">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16" class="icon-menu">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" d="M1.5 3.5h13m-13 4h13m-13 4h13"/>
               </svg>
-              {{search submit=false instant=settings.instant_search class='search search-full'}}
+            </button>
+            <div class="dropdown-menu" id="user-nav">
+              {{#if settings.menu_link_0}} <a href="{{settings.menu_link_0}}" role="menuitem">{{settings.menu_title_0}}</a> {{/if}}
+              {{#if settings.menu_link_1}} <a href="{{settings.menu_link_1}}" role="menuitem">{{settings.menu_title_1}}</a> {{/if}}
+              {{#if settings.menu_link_2}} <a href="{{settings.menu_link_2}}" role="menuitem">{{settings.menu_title_2}}</a> {{/if}}
+              {{#if settings.menu_link_3}} <a href="{{settings.menu_link_3}}" role="menuitem">{{settings.menu_title_3}}</a> {{/if}}
+              {{#if settings.menu_link_4}} <a href="{{settings.menu_link_4}}" role="menuitem">{{settings.menu_title_4}}</a> {{/if}}
+              {{#if settings.menu_link_5}} <a href="{{settings.menu_link_5}}" role="menuitem">{{settings.menu_title_5}}</a> {{/if}}
+              {{#if settings.menu_link_6}} <a href="{{settings.menu_link_6}}" role="menuitem">{{settings.menu_title_6}}</a> {{/if}}
+              {{#if settings.menu_link_7}} <a href="{{settings.menu_link_7}}" role="menuitem">{{settings.menu_title_7}}</a> {{/if}}
+              {{#if settings.menu_link_8}} <a href="{{settings.menu_link_8}}" role="menuitem">{{settings.menu_title_8}}</a> {{/if}}
             </div>
-        {{/if}}  
-      </div>
-    </div>  
+          </div>   
+        </div>
+      	<div class="w3-col s11">
+            <div class="hero-inner">
+                <h2 class="visibility-hidden">{{ t 'search' }}</h2>
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-icon" aria-hidden="true">
+                  <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor"/>
+                  <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5"/>
+                </svg>
+                {{search submit=false instant=settings.instant_search class='search search-full'}}
+            </div>
+        </div>
+      </div>         
+    {{/unless}}
   </div>
 </header>

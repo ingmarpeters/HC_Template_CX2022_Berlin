@@ -1,113 +1,14 @@
 <div class="container-divider"></div>
 <div class="container">
   <nav class="sub-nav">
-    {{breadcrumbs}}
-    <div class="search-container">
-      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-icon">
-        <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor"/>
-        <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5"/>
-      </svg>
-      {{search submit=false}}
-    </div>
+    <ol class="breadcrumbs">  
+    	<li title="Startseite">     
+        <a href="/hc/de">Home</a>
+    	</li> 
+		</ol>
   </nav>
 
   <div class="search-results">
-    <aside class="search-results-sidebar">
-      {{#if help_center_filters}}
-        <section class="filters-in-section collapsible-sidebar" aria-expanded="false">
-          <button type="button" class="collapsible-sidebar-toggle" aria-expanded="false">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" focusable="false" viewBox="0 0 12 12" aria-hidden="true" class="collapsible-sidebar-toggle-icon chevron-icon">
-              <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" focusable="false" viewBox="0 0 12 12" aria-hidden="true" class="collapsible-sidebar-toggle-icon x-icon">
-              <path stroke="currentColor" stroke-linecap="round" d="M3 9l6-6m0 6L3 3"/>
-            </svg>
-          </button>
-          <h3 class="collapsible-sidebar-title sidenav-title">{{t 'filter_by_help_center'}}</h3>
-          <ul class="multibrand-filter-list multibrand-filter-list--collapsed">
-            {{#each help_center_filters}}
-              <li>
-              {{#if selected}}
-                <a href="{{url}}" class="sidenav-item current" aria-current="page">
-              {{else}}
-                <a href="{{url}}" class="sidenav-item">
-              {{/if}}
-                  <span class="sidenav-subitem filter-name">{{name}}</span>
-                  <span class="sidenav-subitem doc-count">({{count}})</span>
-                </a>
-              </li>
-            {{/each}}
-            <button class="see-all-filters" aria-hidden="true" aria-label="{{t 'show_more_help_centers'}}">{{t 'show_more_help_centers'}}</button>
-          </ul>
-        </section>
-      {{/if}}
-      {{#if help_center.community_enabled}}
-        <section class="filters-in-section collapsible-sidebar" aria-expanded="false">
-          <button type="button" class="collapsible-sidebar-toggle" aria-expanded="false">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" focusable="false" viewBox="0 0 12 12" aria-hidden="true" class="collapsible-sidebar-toggle-icon chevron-icon">
-              <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" focusable="false" viewBox="0 0 12 12" aria-hidden="true" class="collapsible-sidebar-toggle-icon x-icon">
-              <path stroke="currentColor" stroke-linecap="round" d="M3 9l6-6m0 6L3 3"/>
-            </svg>
-          </button>
-          <h3 class="collapsible-sidebar-title sidenav-title">{{t 'filter_by_type'}}</h3>
-          <ul class="multibrand-filter-list multibrand-filter-list--collapsed">
-            {{#each filters}}
-              <li>
-              {{#if selected}}
-                <a href="{{url}}" class="sidenav-item current" aria-current="page">
-              {{else}}
-                <a href="{{url}}" class="sidenav-item">
-              {{/if}}
-                  <span class="sidenav-subitem filter-name">{{name}}</span>
-                  <span class="sidenav-subitem doc-count">({{count}})</span>
-                </a>
-              </li>
-            {{/each}}
-          </ul>
-        </section>
-      {{/if}}
-      {{#if subfilters}}
-        <section class="filters-in-section collapsible-sidebar" aria-expanded="false">
-          <button type="button" class="collapsible-sidebar-toggle" aria-expanded="false">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" focusable="false" viewBox="0 0 12 12" aria-hidden="true" class="collapsible-sidebar-toggle-icon chevron-icon">
-              <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" focusable="false" viewBox="0 0 12 12" aria-hidden="true" class="collapsible-sidebar-toggle-icon x-icon">
-              <path stroke="currentColor" stroke-linecap="round" d="M3 9l6-6m0 6L3 3"/>
-            </svg>
-          </button>
-          {{#is current_filter.identifier 'knowledge_base'}}
-            <h3 class="collapsible-sidebar-title sidenav-title">{{t 'filter_by_category'}}</h3>
-          {{/is}}
-          {{#is current_filter.identifier 'community'}}
-            <h3 class="collapsible-sidebar-title sidenav-title">{{t 'filter_by_topic'}}</h3>
-          {{/is}}
-          <ul class="multibrand-filter-list multibrand-filter-list--collapsed">
-            {{#each subfilters}}
-              <li>
-                {{#if selected}}
-                  <a href="{{url}}" class="sidenav-item current" aria-current="page">
-                {{else}}
-                  <a href="{{url}}" class="sidenav-item">
-                {{/if}}
-                  <span class="sidenav-subitem filter-name">{{name}}</span>
-                  <span class="sidenav-subitem doc-count">({{count}})</span>
-                </a>
-              </li>
-            {{/each}}
-            {{#is current_filter.identifier 'knowledge_base'}}
-              <button class="see-all-filters" aria-hidden="true" aria-label="{{t 'show_more_categories'}}">{{t 'show_more_categories'}}</button>
-            {{/is}}
-            {{#is current_filter.identifier 'community'}}
-              <button class="see-all-filters" aria-hidden="true" aria-label="{{t 'show_more_topics'}}">{{t 'show_more_topics'}}</button>
-            {{/is}}
-          </ul>
-        </section>
-      {{/if}}
-    </aside>
-
     <section id="main-content" class="search-results-column">
       <h1 class="search-results-subheading">
         {{#is current_filter.identifier 'unified'}}
@@ -167,8 +68,6 @@
                       {{/each}}
                     </ol>
                   </li>
-                  <li class="meta-data">{{author.name}}</li>
-                  <li class="meta-data">{{date created_at}}</li>
                 </ul>
                 <div class="search-results-description">{{text}}</div>
               </article>

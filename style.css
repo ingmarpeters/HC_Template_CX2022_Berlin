@@ -981,8 +981,8 @@
  
  .nav-wrapper .menu-button .icon-menu {
    vertical-align: middle;
-   width: 20px;
-   height: 20px;
+   width: 30px;
+   height: 30px;
  }
  
  [dir='rtl'] .nav-wrapper .menu-button {
@@ -4766,7 +4766,7 @@
  }
  
  .search-results-sidebar {
-   border-top: 1px solid #ddd;
+  /* border-top: 1px solid #ddd; */
    flex: 1 0 auto;
    margin-bottom: 20px;
    padding: 0;
