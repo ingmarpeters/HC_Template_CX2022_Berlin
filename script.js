@@ -631,8 +631,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (matchingForm) {
       // Hide subject/description fields
-      //document.querySelector('.request_subject').style.display = 'none';
-      //document.querySelector('.request_description').style.display = 'none';
+      document.querySelector('.request_subject').style.display = 'none';
+      document.querySelector('.request_description').style.display = 'none';
 			var inputs = document.getElementsByTagName('label');
       for(var i = 0; i < inputs.length; i++) {
         if (inputs[i].outerText == "Anhänge(optional)"){
