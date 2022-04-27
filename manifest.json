@@ -1,7 +1,7 @@
 {
   "name": "CX Trends 2022 - Berlin",
   "author": "Marcelo De Bortoli, Ingmar Peters",
-  "version": "1.3.10",
+  "version": "1.3.11",
   "api_version": 2,
   "default_locale": "en-us",
   "settings": [
@@ -1054,7 +1054,7 @@
           "type": "color",
           "description": "Text color of the category blocks (hover state)",
           "label": "Text color (hover)",
-          "value": "rgba(213, 22, 24, 1)"
+          "value": "rgba(0, 166, 86, 1)"
         },
         {
           "identifier": "blocks_bg_color_top",

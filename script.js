@@ -577,6 +577,34 @@ const ticketFormConfig = [
       Kaffee Variante: {{4710342226205}} <br />
       Milch: {{4942215521181}} <br />
       Kommentar: {{4920672149661}}`
+  },
+  {
+    // Set your ticket form ID
+    formId: 4942050482461, //Order Healthgarden
+
+    // Set your desired form subject
+    subject: `Neue Bestellung: {{4943683259933}}`,
+
+    // Set your desired form subject
+    description: `
+    	--- Eine neue Bestellung --- <br /> <br />		
+      Menü: {{4943683259933}} <br />
+      Topping: {{4943785515421}} <br />
+      Kommentar: {{4920672149661}}`
+  },
+  {
+    // Set your ticket form ID
+    formId: 4943420047261, //Order Drink
+
+    // Set your desired form subject
+    subject: `Neue Bestellung: {{4943806135709}}`,
+
+    // Set your desired form subject
+    description: `
+    	--- Eine neue Bestellung --- <br /> <br />		
+      Signature Drink: {{4943806135709}} <br />
+      Filler: {{4943840599453}} <br />
+      Kommentar: {{4920672149661}}`
   }
   // You can set rules for multiple forms by adding new objects to this variable.
   // {
@@ -615,11 +643,19 @@ document.addEventListener('DOMContentLoaded', function () {
         const newSubject = (matchingForm.subject ? getDynamicText(matchingForm.subject) : 'No subject');
         const newDescription = (matchingForm.description ? getDynamicText(matchingForm.description) : 'No description');
 
-        document.getElementById('request_subject').value = newSubject;
-        document
-          .getElementById('request_description_ifr')
-          .contentWindow.document.querySelector('#tinymce').innerHTML =
-          newDescription
+        document.getElementById('request_subject').value = newSubject;        
+        var elementWeb =  document.getElementById('request_description_ifr');
+				if (typeof(elementWeb) != 'undefined' && elementWeb != null) {
+          document
+            .getElementById('request_description_ifr')
+            .contentWindow.document.querySelector('#tinymce').innerHTML =
+            newDescription
+				}
+
+        var elementMobile =  document.getElementById('request_description');
+				if (typeof(elementMobile) != 'undefined' && elementMobile != null){
+          document.getElementById('request_description').value = newDescription;
+        }
       });
     }
   }
