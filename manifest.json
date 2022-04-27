@@ -50,174 +50,174 @@
           "identifier": "menu_title_0",
           "type": "text",
           "description": "The title of menu item #0",
-          "label": "Menu title",
+          "label": "Menu title #0",
           "value": "CX Trends 2022"
         },
         {
           "identifier": "menu_link_0",
           "type": "text",
           "description": "The link of menu item #0",
-          "label": "Menu URL",
+          "label": "Menu URL #0",
           "value": "https://z3n-cx2022.zendesk.com/hc"
         },
         {
           "identifier": "menu_title_1",
           "type": "text",
           "description": "The title of menu item #1",
-          "label": "Menu title",
+          "label": "Menu title #1",
           "value": "Event Support"
         },
         {
           "identifier": "menu_image_1",
           "type": "file",
           "description": "The image of menu item #1",
-          "label": "Menu image"
+          "label": "Menu image #1"
         },
         {
           "identifier": "menu_link_1",
           "type": "text",
           "description": "The link of menu item #1",
-          "label": "Menu URL",
+          "label": "Menu URL #1",
           "value": "https://z3n-eventsupport.zendesk.com/hc"
         },
         {
           "identifier": "menu_title_2",
           "type": "text",
           "description": "The title of menu item #2",
-          "label": "Menu title",
+          "label": "Menu title #2",
           "value": "Barista"
         },
         {
           "identifier": "menu_image_2",
           "type": "file",
           "description": "The image of menu item #2",
-          "label": "Menu image"
+          "label": "Menu image #2"
         },
         {
           "identifier": "menu_link_2",
           "type": "text",
           "description": "The link of menu item #2",
-          "label": "Menu URL",
+          "label": "Menu URL #2",
           "value": "https://z3n-barista.zendesk.com/hc"
         },
         {
           "identifier": "menu_title_3",
           "type": "text",
           "description": "The title of menu item #3",
-          "label": "Menu title",
+          "label": "Menu title #3",
           "value": "Dumplings"
         },
         {
           "identifier": "menu_image_3",
           "type": "file",
           "description": "The image of menu item #3",
-          "label": "Menu image"
+          "label": "Menu image #3"
         },
         {
           "identifier": "menu_link_3",
           "type": "text",
           "description": "The link of menu item #3",
-          "label": "Menu URL",
+          "label": "Menu URL #3",
           "value": "https://z3n-dumpling.zendesk.com/hc"
         },
         {
           "identifier": "menu_title_4",
           "type": "text",
           "description": "The title of menu item #4",
-          "label": "Menu title",
+          "label": "Menu title #4",
           "value": "The Liqbar"
         },
         {
           "identifier": "menu_image_4",
           "type": "file",
           "description": "The image of menu item #4",
-          "label": "Menu image"
+          "label": "Menu image #4"
         },
         {
           "identifier": "menu_link_4",
           "type": "text",
           "description": "The link of menu item #4",
-          "label": "Menu URL",
+          "label": "Menu UR #4L",
           "value": "https://z3n-liqbar.zendesk.com/hc"
         },
         {
           "identifier": "menu_title_5",
           "type": "text",
           "description": "The title of menu item #5",
-          "label": "Menu title",
+          "label": "Menu title #5",
           "value": "Tech for Good"
         },
         {
           "identifier": "menu_image_5",
           "type": "file",
           "description": "The image of menu item #5",
-          "label": "Menu image"
+          "label": "Menu image #5"
         },
         {
           "identifier": "menu_link_5",
           "type": "text",
           "description": "The link of menu item #5",
-          "label": "Menu URL",
+          "label": "Menu URL #5",
           "value": "https://helpers.zendesk.com/techforgood"
         },
         {
           "identifier": "menu_title_6",
           "type": "text",
           "description": "The title of menu item #6",
-          "label": "Menu title",
+          "label": "Menu title #6",
           "value": "Blackboard"
         },
         {
           "identifier": "menu_image_6",
           "type": "file",
           "description": "The image of menu item #6",
-          "label": "Menu image"
+          "label": "Menu image #6"
         },
         {
           "identifier": "menu_link_6",
           "type": "text",
           "description": "The link of menu item #6",
-          "label": "Menu URL",
+          "label": "Menu URL #6",
           "value": "https://z3n-blackboard.zendesk.com/hc"
         },
         {
           "identifier": "menu_title_7",
           "type": "text",
           "description": "The title of menu item #7",
-          "label": "Menu title",
+          "label": "Menu title #7",
           "value": "Healthgarden"
         },
         {
           "identifier": "menu_image_7",
           "type": "file",
           "description": "The image of menu item #7",
-          "label": "Menu image"
+          "label": "Menu image #7"
         },
         {
           "identifier": "menu_link_7",
           "type": "text",
           "description": "The link of menu item #7",
-          "label": "Menu URL",
+          "label": "Menu URL #7",
           "value": "https://z3n-healthgarden.zendesk.com/"
         },
         {
           "identifier": "menu_title_8",
           "type": "text",
           "description": "The title of menu item #8",
-          "label": "Menu title",
+          "label": "Menu title #8",
           "value": "Street Art Wall"
         },
         {
           "identifier": "menu_image_8",
           "type": "file",
           "description": "The image of menu item #8",
-          "label": "Menu image"
+          "label": "Menu image #8"
         },
         {
           "identifier": "menu_link_8",
           "type": "text",
           "description": "The link of menu item #8",
-          "label": "Menu URL",
+          "label": "Menu URL #8",
           "value": "https://z3n-streetartwall.zendesk.com/hc"
         }
       ]
@@ -244,6 +244,23 @@
           "description": "URL to first form",
           "label": "URL form 1",
           "value": "requests/new?ticket_form_id=4710225526685"
+        },
+        {
+          "identifier": "form1_url_target",
+          "type": "list",
+          "description": "URL target (blank or self) form 1",
+          "label": "URL target form 1",
+          "value": "_self",
+          "options": [
+            {
+              "label": "Self",
+              "value": "_self"
+            },
+            {
+              "label": "Blank",
+              "value": "_blank"
+            }
+          ]
         },
         {
           "identifier": "form1_title",
@@ -273,6 +290,23 @@
           "value": ""
         },
         {
+          "identifier": "form2_url_target",
+          "type": "list",
+          "description": "URL target (blank or self) form 2",
+          "label": "URL target form 2",
+          "value": "_self",
+          "options": [
+            {
+              "label": "Self",
+              "value": "_self"
+            },
+            {
+              "label": "Blank",
+              "value": "_blank"
+            }
+          ]
+        },
+        {
           "identifier": "form2_title",
           "type": "text",
           "description": "Title of second form",
@@ -293,6 +327,30 @@
           "label": "Image form 2"
         },
         {
+          "identifier": "book_appointment_url",
+          "type": "text",
+          "description": "Book appointment URL",
+          "label": "Book appointment URL",
+          "value": "https://calendarhero.to/presentsberlin"
+        },
+        {
+          "identifier": "book_appointment_url_target",
+          "type": "list",
+          "description": "URL target (blank or self) book appointment",
+          "label": "URL target book appointment",
+          "value": "_blank",
+          "options": [
+            {
+              "label": "Self",
+              "value": "_self"
+            },
+            {
+              "label": "Blank",
+              "value": "_blank"
+            }
+          ]
+        },
+        {
           "identifier": "book_appointment_title",
           "type": "text",
           "description": "Book appointment title",
@@ -307,13 +365,6 @@
           "value": ""
         },
         {
-          "identifier": "book_appointment_url",
-          "type": "text",
-          "description": "Book appointment URL",
-          "label": "Book appointment URL",
-          "value": "https://calendarhero.to/presentsberlin"
-        },
-        {
           "identifier": "book_appointment_image",
           "type": "file",
           "description": "Image for book appointment",
@@ -325,6 +376,23 @@
           "description": "Additional URL to show",
           "label": "Additional entry URL",
           "value": ""
+        },
+        {
+          "identifier": "additional_entry_url_target",
+          "type": "list",
+          "description": "URL target (blank or self) additional entry",
+          "label": "URL target additional entry",
+          "value": "_blank",
+          "options": [
+            {
+              "label": "Self",
+              "value": "_self"
+            },
+            {
+              "label": "Blank",
+              "value": "_blank"
+            }
+          ]
         },
         {
           "identifier": "additional_entry_title",

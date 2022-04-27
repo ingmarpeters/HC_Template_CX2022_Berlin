@@ -41,7 +41,7 @@
 
           {{#if settings.menu_link_5}}
             <li class="cx2022-blocks-item brand_block_5">
-              <a href='{{settings.menu_link_5}}' class="cx2022-blocks-item-link">
+              <a href='{{settings.menu_link_5}}' class="cx2022-blocks-item-link" target="_blank">
                 <span class="cx2022-blocks-item-title">{{settings.menu_title_5}}</span>
               </a>
             </li>
@@ -93,13 +93,8 @@
           <!-- Form 1 -->
           {{#if settings.form1_url}}
             <li class="cx2022-blocks-item form1-block">
-              <a href='{{settings.form1_url}}' class="cx2022-blocks-item-link">
-                <span class="cx2022-blocks-item-title">
-                    {{#is help_center.locale 'de'}}{{settings.form1_title}}{{/is}}
-                    {{#is help_center.locale 'de-de'}}{{settings.form1_title}}{{/is}}
-                    {{#is help_center.locale 'en-gb'}}{{settings.form1_title_en}}{{/is}}
-                    {{#is help_center.locale 'en-us'}}{{settings.form1_title_en}}{{/is}}
-                </span>
+              <a href='{{settings.form1_url}}' class="cx2022-blocks-item-link" target="{{form1_url_target}}">
+                <span class="cx2022-blocks-item-title">{{settings.form1_title}}</span>
               </a>
             </li>
           {{/if}}
@@ -107,13 +102,8 @@
           <!-- Form 2 -->
           {{#if settings.form2_url}}
             <li class="cx2022-blocks-item form2-block">
-              <a href='{{settings.form2_url}}' class="cx2022-blocks-item-link">
-                <span class="cx2022-blocks-item-title">
-                    {{#is help_center.locale 'de'}}{{settings.form2_title}}{{/is}}
-                    {{#is help_center.locale 'de-de'}}{{settings.form2_title}}{{/is}}
-                    {{#is help_center.locale 'en-gb'}}{{settings.form2_title_en}}{{/is}}
-                    {{#is help_center.locale 'en-us'}}{{settings.form2_title_en}}{{/is}}
-                </span>
+              <a href='{{settings.form2_url}}' class="cx2022-blocks-item-link" target="{{form2_url_target}}">
+                <span class="cx2022-blocks-item-title">{{settings.form2_title}}</span>
               </a>            
             </li>
           {{/if}}
@@ -121,13 +111,8 @@
           <!-- Book Appointment -->
           {{#if settings.book_appointment_url}}
             <li class="cx2022-blocks-item appointment-block">
-              <a href='{{settings.book_appointment_url}}' class="cx2022-blocks-item-link">
-                <span class="cx2022-blocks-item-title">
-                    {{#is help_center.locale 'de'}}{{settings.book_appointment_title}}{{/is}}
-                    {{#is help_center.locale 'de-de'}}{{settings.book_appointment_title}}{{/is}}
-                    {{#is help_center.locale 'en-gb'}}{{settings.book_appointment_title_en}}{{/is}}
-                    {{#is help_center.locale 'en-us'}}{{settings.book_appointment_title_en}}{{/is}}                
-                </span>
+              <a href='{{settings.book_appointment_url}}' class="cx2022-blocks-item-link" target="{{book_appointment_url_target}}">
+                <span class="cx2022-blocks-item-title">{{settings.book_appointment_title}}</span>
               </a>            
             </li>  
           {{/if}}
@@ -135,13 +120,8 @@
           <!-- Additional Entry --> 
           {{#if settings.additional_entry_url}}
             <li class="cx2022-blocks-item additional-entry-block">
-              <a href='{{settings.additional_entry_url}}' class="cx2022-blocks-item-link">
-                <span class="cx2022-blocks-item-title">
-                    {{#is help_center.locale 'de'}}{{settings.additional_entry_title}}{{/is}}
-                    {{#is help_center.locale 'de-de'}}{{settings.additional_entry_title}}{{/is}}
-                    {{#is help_center.locale 'en-gb'}}{{settings.additional_entry_title_en}}{{/is}}
-                    {{#is help_center.locale 'en-us'}}{{settings.additional_entry_title_en}}{{/is}}  
-                </span>
+              <a href='{{settings.additional_entry_url}}' class="cx2022-blocks-item-link" target="{{additional_entry_url_target}}">
+                <span class="cx2022-blocks-item-title">{{settings.additional_entry_title}}</span>
               </a>            
             </li>
           {{/if}}
