@@ -567,6 +567,7 @@ const ticketFormConfig = [
   {
     // Set your ticket form ID
     formId: 4710225526685, //Order Coffee
+		//formId: 425526685, //Order Coffee
 
     // Set your desired form subject
     subject: `Neue Bestellung: {{4710342226205}}`,
@@ -588,9 +589,10 @@ const ticketFormConfig = [
     // Set your desired form subject
     description: `
     	--- Eine neue Bestellung --- <br /> <br />		
-      Menü: {{4943683259933}} <br />
+			Menü: {{4943683259933}} <br />
       Topping: {{4943785515421}} <br />
-      Kommentar: {{4920672149661}}`
+			Kommentar: {{4948049610525}}
+			`
   },
   {
     // Set your ticket form ID
@@ -604,7 +606,7 @@ const ticketFormConfig = [
     	--- Eine neue Bestellung --- <br /> <br />		
       Signature Drink: {{4943806135709}} <br />
       Filler: {{4943840599453}} <br />
-      Kommentar: {{4920672149661}}`
+      Kommentar: {{4948049610525}}`
   }
   // You can set rules for multiple forms by adding new objects to this variable.
   // {
@@ -629,20 +631,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (matchingForm) {
       // Hide subject/description fields
-      document.querySelector('.request_subject').style.display = 'none';
-      document.querySelector('.request_description').style.display = 'none';
+      //document.querySelector('.request_subject').style.display = 'none';
+      //document.querySelector('.request_description').style.display = 'none';
 			var inputs = document.getElementsByTagName('label');
       for(var i = 0; i < inputs.length; i++) {
         if (inputs[i].outerText == "Anhänge(optional)"){
           inputs[i].parentNode.style.display = 'none';
         }        
       }
+    
+  //    console.log(document.getElementById('request_custom_fields_4943785515421'));
 
       // Replace subject/description values by the new data before form submission
       document.querySelector('#new_request input[type=submit]').addEventListener('click', function (e) {
         const newSubject = (matchingForm.subject ? getDynamicText(matchingForm.subject) : 'No subject');
         const newDescription = (matchingForm.description ? getDynamicText(matchingForm.description) : 'No description');
-
+        
         document.getElementById('request_subject').value = newSubject;        
         var elementWeb =  document.getElementById('request_description_ifr');
 				if (typeof(elementWeb) != 'undefined' && elementWeb != null) {
@@ -656,6 +660,9 @@ document.addEventListener('DOMContentLoaded', function () {
 				if (typeof(elementMobile) != 'undefined' && elementMobile != null){
           document.getElementById('request_description').value = newDescription;
         }
+				
+
+
       });
     }
   }
@@ -680,6 +687,9 @@ function getDynamicText(str) {
       if (returnValue) {
         str = str.replace(labels[i], returnValue);
       }
+      else {
+        str = str.replace(labels[i], "-");
+      }
     }
   }
 
@@ -696,11 +706,16 @@ function getFieldValueById(id) {
   }
 
   const rawValue = element.value;
-  const fieldNames = JSON.parse(element.getAttribute('data-tagger'));
+  const rawoutertext = element.outerText;
+  if (rawoutertext != "") {
+    return rawoutertext
+  }
+  else {
+	  const fieldNames = JSON.parse(element.getAttribute('data-tagger'));
+  	const fieldValue = (fieldNames ? fieldNames.find(o => o.value === rawValue) : rawValue);
 
-  const fieldValue = (fieldNames ? fieldNames.find(o => o.value === rawValue) : rawValue);
-
-  return (fieldValue && fieldValue.label ? fieldValue.label : fieldValue);
+    return (fieldValue && fieldValue.label ? fieldValue.label : fieldValue);    
+  }
 }
 
 // Get custom field ID by its label text
