@@ -607,6 +607,19 @@ const ticketFormConfig = [
       Signature Drink: {{4943806135709}} <br />
       Filler: {{4943840599453}} <br />
       Kommentar: {{4948049610525}}`
+  },
+  {
+    // Set your ticket form ID
+    formId: 5000237497629, //Order Drink Recipe
+
+    // Set your desired form subject
+    subject: `Rezeptanforderung: {{4943806135709}}`,
+
+    // Set your desired form subject
+    description: `
+    	--- Eine neue Rezeptanforderung --- <br /> <br />		
+      Signature Drink: {{4943806135709}} <br />
+      Kommentar: {{4948049610525}}`
   }
   // You can set rules for multiple forms by adding new objects to this variable.
   // {
@@ -626,6 +639,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const formSelector = document.querySelector('.request_ticket_form_id select');
     const currentForm = formSelector.options[formSelector.selectedIndex].value;
 
+    // Hide Form selector and get form title
+    const ticketform = document.getElementsByClassName("request_ticket_form_id");
+    const formtitle = ticketform[0].childNodes[2].innerText;
+    ticketform[0].style.display = 'none';
+
+    // Replace default title with form title
+    const requesttitle = document.getElementById("request_title")
+    requesttitle.innerText = formtitle
+    
     // Check if the current selected form is in the configuration array
     const matchingForm = ticketFormConfig.find(o => o.formId == currentForm);
 
@@ -633,15 +655,15 @@ document.addEventListener('DOMContentLoaded', function () {
       // Hide subject/description fields
       document.querySelector('.request_subject').style.display = 'none';
       document.querySelector('.request_description').style.display = 'none';
-			var inputs = document.getElementsByTagName('label');
+
+      // Hide Upload Attachement Fields
+      var inputs = document.getElementsByTagName('label');
       for(var i = 0; i < inputs.length; i++) {
         if (inputs[i].outerText == "Anhänge(optional)"){
           inputs[i].parentNode.style.display = 'none';
         }        
-      }
-    
-  //    console.log(document.getElementById('request_custom_fields_4943785515421'));
-
+      }     
+      
       // Replace subject/description values by the new data before form submission
       document.querySelector('#new_request input[type=submit]').addEventListener('click', function (e) {
         const newSubject = (matchingForm.subject ? getDynamicText(matchingForm.subject) : 'No subject');
@@ -660,9 +682,6 @@ document.addEventListener('DOMContentLoaded', function () {
 				if (typeof(elementMobile) != 'undefined' && elementMobile != null){
           document.getElementById('request_description').value = newDescription;
         }
-				
-
-
       });
     }
   }
