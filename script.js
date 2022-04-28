@@ -567,18 +567,13 @@ const ticketFormConfig = [
   {
     // Set your ticket form ID
     formId: 4710225526685, //Order Coffee
-		//formId: 425526685, //Order Coffee
 
     // Set your desired form subject
     subject: `Neue Bestellung: {{4710342226205}}`,
 
     // Set your desired form subject
-    description: `
-    	--- Eine neue Bestellung --- <br /> <br />		
-      Kaffee Variante: {{4710342226205}} <br />
-      Milch: {{4942215521181}} <br />
-      Kommentar: {{4920672149661}}`
-  },
+    description: `--- Eine neue Bestellung --- <br /><br />Kaffee Variante: {{4710342226205}}<br />Milch: {{4942215521181}}<br /><br />Kommentar: {{4920672149661}}`
+	},
   {
     // Set your ticket form ID
     formId: 4942050482461, //Order Healthgarden
@@ -587,12 +582,7 @@ const ticketFormConfig = [
     subject: `Neue Bestellung: {{4943683259933}}`,
 
     // Set your desired form subject
-    description: `
-    	--- Eine neue Bestellung --- <br /> <br />		
-			Menü: {{4943683259933}} <br />
-      Topping: {{4943785515421}} <br />
-			Kommentar: {{4948049610525}}
-			`
+    description: `--- Eine neue Bestellung --- <br /><br />Menü: {{4943683259933}}<br />Topping: {{4943785515421}}<br /><br />Kommentar: {{4948049610525}}`
   },
   {
     // Set your ticket form ID
@@ -602,11 +592,7 @@ const ticketFormConfig = [
     subject: `Neue Bestellung: {{4943806135709}}`,
 
     // Set your desired form subject
-    description: `
-    	--- Eine neue Bestellung --- <br /> <br />		
-      Signature Drink: {{4943806135709}} <br />
-      Filler: {{4943840599453}} <br />
-      Kommentar: {{4948049610525}}`
+    description: `--- Eine neue Bestellung --- <br /><br />Signature Drink: {{4943806135709}}<br />Filler: {{4943840599453}}<br /><br />Kommentar: {{4948049610525}}`
   },
   {
     // Set your ticket form ID
@@ -616,10 +602,7 @@ const ticketFormConfig = [
     subject: `Rezeptanforderung: {{4943806135709}}`,
 
     // Set your desired form subject
-    description: `
-    	--- Eine neue Rezeptanforderung --- <br /> <br />		
-      Signature Drink: {{4943806135709}} <br />
-      Kommentar: {{4948049610525}}`
+    description: `--- Eine neue Rezeptanforderung --- <br /><br />Signature Drink: {{4943806135709}}<br /><br />Kommentar: {{4948049610525}}`
   }
   // You can set rules for multiple forms by adding new objects to this variable.
   // {
