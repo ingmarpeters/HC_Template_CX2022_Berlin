@@ -497,33 +497,102 @@ document.addEventListener('click', function (event) {
 }(window,document,"Smooch","625f3086c6f30400f3773442","5");
 
 //Initialise Sunshine Conversations Web Messenger
-Smooch.init({ integrationId: '625f3086c6f30400f3773442',
-canUserSeeConversationList: false,
-delegate: {
-       beforeDisplay(message, data) {
-       //Add avatarURL to message 
-       message.avatarUrl = "https://cdn.shopify.com/s/files/1/1061/1924/products/Robot_Emoji_Icon_7070a254-26f7-4a54-8131-560e38e34c2e_grande.png"
-       
-       //Do not display "hidden" messages
-       if (message.metadata && message.metadata.isHidden) {
-           return null;
-       }
-       return message;
-   }
-}
-}).then(function() {
-       // Your code after init is complete
-       //Create Conversation if one does not exist
-       var Conversations = Smooch.getConversations()
-       if ( Conversations.length == 0){
-           Smooch.createConversation({
-               displayName: "Welcome!!",
-               description: "Zendesk CX Trends 2022",
-           })
-       } 
-   }
-);
+let myDomain = document.domain;
 
+if (myDomain != "z3n-dumpling"){
+    Smooch.init({ integrationId: '625f3086c6f30400f3773442',
+        canUserSeeConversationList: false,
+        soundNotificationEnabled: false, 
+        delegate: {
+                beforeDisplay(message, data) {
+                //Add avatarURL to message 
+                message.avatarUrl = "https://cdn.shopify.com/s/files/1/1061/1924/products/Robot_Emoji_Icon_7070a254-26f7-4a54-8131-560e38e34c2e_grande.png"
+                
+                if (message.metadata && message.metadata.isHidden) {
+                    return null;
+                }
+                return message;
+            }
+        }
+        }).then(function() {
+                // Your code after init is complete
+                //Create Conversation if one does not exist
+                var Conversations = Smooch.getConversations()
+                if ( Conversations.length == 0){
+                    Smooch.createConversation({
+                        displayName: "Welcome!!",
+                        description: "Zendesk CX Trends 2022",
+                    })
+                } 
+            }
+        );
+}
+
+if (myDomain == "z3n-streetartwall"){
+     Smooch.on('widget:opened', function () {
+    //Get Conversation & Send Message
+    {
+                    Smooch.getConversationById().then(function(conversation) {
+                    if (conversation.messages.length == 0){
+                        Smooch.sendMessage(
+                        {
+                            type: 'text',
+                            text: 'street art',
+                            metadata: {
+                            isHidden:true
+                            }
+                        },
+                        conversation.id,
+                        ); 
+                        }
+                    } 
+                    );
+                }
+    });
+} else if (myDomain == "z3n-liqbar") {
+    Smooch.on('widget:opened', function () {
+        //Get Conversation & Send Message
+        {
+                        Smooch.getConversationById().then(function(conversation) {
+                        if (conversation.messages.length == 0){
+                            Smooch.sendMessage(
+                            {
+                                type: 'text',
+                                text: 'The LIQBAR',
+                                metadata: {
+                                isHidden:true
+                                }
+                            },
+                            conversation.id,
+                            ); 
+                            }
+                        } 
+                        );
+                    }
+        });
+} else {
+         Smooch.on('widget:opened', function () {
+    //Get Conversation & Send Message
+    {
+                    Smooch.getConversationById().then(function(conversation) {
+                    if (conversation.messages.length == 0){
+                        Smooch.sendMessage(
+                        {
+                            type: 'text',
+                            text: 'DACH Roadshow',
+                            metadata: {
+                            isHidden:true
+                            }
+                        },
+                        conversation.id,
+                        ); 
+                        }
+                    } 
+                    );
+                }
+    });
+}
+/*
 //Send hidden message when the widget is opened and the conversation has no messages
 Smooch.on('widget:opened', function () {
 //Get Conversation & Send Message
@@ -545,7 +614,7 @@ Smooch.on('widget:opened', function () {
            );
        }
 });
-
+*/
 
 // *****************************************************************************************************
 // *****************************************************************************************************
