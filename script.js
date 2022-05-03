@@ -501,7 +501,7 @@ let myDomain = document.domain;
 
 if (myDomain != "z3n-dumpling"){
     Smooch.init({ integrationId: '625f3086c6f30400f3773442',
-        canUserSeeConversationList: false,
+        canUserSeeConversationList: true,
         soundNotificationEnabled: false, 
         delegate: {
                 beforeDisplay(message, data) {
